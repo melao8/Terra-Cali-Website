@@ -131,11 +131,37 @@ footer{background:#021d4a;color:white;padding:3.5rem 3rem 2rem}
 .footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;max-width:1140px;margin:0 auto}
 .footer-bottom p{font-size:0.75rem;color:rgba(255,255,255,0.25);font-weight:300}
 .footer-tagline{font-family:"Playfair Display",serif;font-style:italic;font-size:0.82rem;color:rgba(255,255,255,0.3)}
-@media (max-width: 768px) {
-  nav { height: auto; padding: .75rem 1rem; flex-wrap: wrap; }
+.nav-hamburger {
+  display: none; flex-direction: column; gap: 5px;
+  cursor: pointer; padding: 6px; border: none; background: none;
+}
+.nav-hamburger span {
+  display: block; width: 24px; height: 2px;
+  background: var(--azul); border-radius: 2px;
+}
+.mobile-menu {
+  display: none; position: fixed; top: 80px; left: 0; right: 0; z-index: 99;
+  background: var(--blanco); border-bottom: 3px solid var(--azul);
+  padding: 1.25rem 1.5rem; flex-direction: column; gap: .25rem;
+  box-shadow: 0 8px 24px rgba(5,56,128,.13);
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  font-size: .97rem; font-weight: 700; color: #2a3a4a;
+  text-decoration: none; padding: .75rem 0;
+  border-bottom: 1px solid rgba(8,82,175,.07);
+}
+.mobile-menu a:last-child { border-bottom: none; }
+.mobile-menu .m-cta {
+  margin-top: .75rem; background: var(--verde); color: var(--blanco);
+  text-align: center; padding: .9rem; border-radius: 8px; border-bottom: none;
+}
+  @media (max-width: 768px) {
+  nav { height: 80px; padding: 0 1rem; }
   .nav-logo img { height: 58px; }
   .nav-links { display: none; }
   .nav-cta { display: none; }
+  .nav-hamburger { display: flex; }
   .hero-content { padding: 1.5rem 1rem; }
   .hero-btns { flex-direction: column; gap: .75rem; }
   .hero-btns a { width: 100%; text-align: center; justify-content: center; }
@@ -160,8 +186,19 @@ footer{background:#021d4a;color:white;padding:3.5rem 3rem 2rem}
     <li><a href="#blog">Blog</a></li>
   </ul>
   <a href="https://wa.me/526646120031" class="nav-cta">Hablar con un Asesor</a>
+<button class="nav-hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Abrir menú">
+  <span></span><span></span><span></span>
+</button>
 </nav>
-
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Inicio</a>
+  <a href="residencial.html">Residencial</a>
+  <a href="comercial.html">Comercial</a>
+  <a href="casas.html">Casas</a>
+  <a href="nosotros.html">Nosotros</a>
+  <a href="https://wa.me/526646120031" class="m-cta" target="_blank">📲 Hablar con un Asesor</a>
+</div>
+  
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
@@ -385,6 +422,17 @@ footer{background:#021d4a;color:white;padding:3.5rem 3rem 2rem}
     <span class="footer-tagline">Donde tu historia comienza</span>
   </div>
 </footer>
-
+<script>
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  document.addEventListener('click', function(e) {
+    const menu = document.getElementById('mobileMenu');
+    if (!menu.classList.contains('open')) return;
+    if (!menu.contains(e.target) && !document.getElementById('hamburger').contains(e.target)) {
+      menu.classList.remove('open');
+    }
+  });
+</script>
 </body>
 </html>
