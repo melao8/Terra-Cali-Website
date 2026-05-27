@@ -131,6 +131,17 @@ footer{background:#021d4a;color:white;padding:3.5rem 3rem 2rem}
 .footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;max-width:1140px;margin:0 auto}
 .footer-bottom p{font-size:0.75rem;color:rgba(255,255,255,0.25);font-weight:300}
 .footer-tagline{font-family:"Playfair Display",serif;font-style:italic;font-size:0.82rem;color:rgba(255,255,255,0.3)}
+@media (max-width: 768px) {
+  nav { height: auto; padding: .75rem 1rem; flex-wrap: wrap; }
+  .nav-logo img { height: 58px; }
+  .nav-links { display: none; }
+  .nav-cta { display: none; }
+  .hero-content { padding: 1.5rem 1rem; }
+  .hero-btns { flex-direction: column; gap: .75rem; }
+  .hero-btns a { width: 100%; text-align: center; justify-content: center; }
+  .hero-stats { gap: 1rem; flex-wrap: wrap; }
+  .hero-stat { min-width: 40%; }
+}
 </style>
 </head>
 <body>
