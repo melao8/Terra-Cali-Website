@@ -131,7 +131,47 @@ footer{background:#021d4a;color:white;padding:3.5rem 3rem 2rem}
 .footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;max-width:1140px;margin:0 auto}
 .footer-bottom p{font-size:0.75rem;color:rgba(255,255,255,0.25);font-weight:300}
 .footer-tagline{font-family:"Playfair Display",serif;font-style:italic;font-size:0.82rem;color:rgba(255,255,255,0.3)}
-.nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;margin-left:auto;flex-shrink:0}.nav-hamburger span{display:block;width:22px;height:2px;background:var(--azul);border-radius:2px}.mobile-menu{display:none;flex-direction:column;background:#fff;padding:1rem 2.5rem;border-bottom:1px solid #e8edf5;gap:.25rem;position:fixed;top:108px;left:0;right:0;z-index:998;box-shadow:0 8px 20px rgba(0,0,0,.08)}.mobile-menu a{padding:.65rem 0;font-weight:700;font-size:.95rem;border-bottom:1px solid #f0f4fb;color:var(--texto)}.mobile-menu a:last-child{border:none}.mobile-menu .m-cta{margin-top:.5rem;background:var(--verde);color:#fff;text-align:center;padding:.75rem;border-radius:8px}.mobile-menu.open{display:flex}@media(max-width:900px){.nav-hamburger{display:flex}.nav-cta{display:none}.nav-links{display:none}}</style>
+.nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;margin-left:auto;flex-shrink:0}.nav-hamburger span{display:block;width:22px;height:2px;background:var(--azul);border-radius:2px}.mobile-menu{display:none;flex-direction:column;background:#fff;padding:1rem 2.5rem;border-bottom:1px solid #e8edf5;gap:.25rem;position:fixed;top:0;left:0;right:0;z-index:998;box-shadow:0 8px 20px rgba(0,0,0,.08);padding-top:90px}.mobile-menu a{padding:.65rem 0;font-weight:700;font-size:.95rem;border-bottom:1px solid #f0f4fb;color:var(--texto)}.mobile-menu a:last-child{border:none}.mobile-menu .m-cta{margin-top:.5rem;background:var(--verde);color:#fff;text-align:center;padding:.75rem;border-radius:8px}.mobile-menu.open{display:flex}@media(max-width:900px){.nav-hamburger{display:flex}.nav-cta{display:none}.nav-links{display:none}}
+@media(max-width:768px){
+  nav{padding:0 4%}
+  .nav-logo img{height:60px}
+  .mobile-menu{top:80px}
+  .hero-content{padding:6rem 4% 3rem}
+  .hero-content h1{font-size:2.2rem}
+  .hero-tagline{font-size:1rem}
+  .hero-content p{font-size:.9rem}
+  .hero-btns{flex-direction:column;gap:.75rem;align-items:flex-start}
+  .btn-hero-primary,.btn-hero-secondary{width:100%;justify-content:center;text-align:center}
+  .hero-stats{gap:1.5rem}
+  .hero-stat-num{font-size:1.6rem}
+  .propiedades{padding:50px 4%}
+  .cards-grid{grid-template-columns:1fr;gap:1.5rem}
+  .section-title{font-size:1.6rem}
+  .porque{padding:50px 4%}
+  .porque-inner{flex-direction:column;gap:2.5rem}
+  .porque-right{width:100%}
+  .porque-img-stack{height:280px}
+  .porque-img-main{width:100%;height:100%}
+  .porque-img-inset{display:none}
+  .features-grid{grid-template-columns:1fr}
+  .quienes{padding:50px 4%}
+  .quienes-inner{flex-direction:column;gap:2rem}
+  .valores-list{gap:1rem}
+  .valor{padding:1rem}
+  .cta{padding:50px 4%}
+  .cta-btns{flex-direction:column;align-items:center;gap:.75rem}
+  .btn-wa,.btn-email{width:100%;max-width:320px;justify-content:center;text-align:center}
+  footer{padding:40px 4% 24px}
+  .footer-inner{grid-template-columns:1fr;gap:2rem}
+  .footer-bottom{flex-direction:column;text-align:center;gap:.5rem}
+  .section-header{padding:0 4%}
+}
+@media(max-width:480px){
+  .hero-content h1{font-size:1.8rem}
+  .hero-stat-num{font-size:1.4rem}
+  .prop-card-title{font-size:1rem}
+}
+</style>
 </head>
 <body>
 
