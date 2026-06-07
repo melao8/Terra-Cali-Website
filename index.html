@@ -141,6 +141,40 @@ footer{background:#021d4a;color:white;padding:3.5rem 3rem 2rem}
 .footer-bottom{border-top:1px solid rgba(255,255,255,0.06);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;max-width:1140px;margin:0 auto}
 .footer-bottom p{font-size:0.75rem;color:rgba(255,255,255,0.25);font-weight:300}
 .footer-tagline{font-family:"Playfair Display",serif;font-style:italic;font-size:0.82rem;color:rgba(255,255,255,0.3)}
+
+.nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;flex-shrink:0;margin-left:auto}
+.nav-hamburger span{display:block;width:22px;height:2px;background:var(--azul);border-radius:2px;transition:transform 0.2s}
+.mobile-menu{display:none;flex-direction:column;background:#fff;padding:1rem 2.5rem;border-bottom:1px solid #e8edf5;gap:.2rem;position:fixed;top:80px;left:0;right:0;z-index:99;box-shadow:0 8px 20px rgba(0,0,0,.08)}
+.mobile-menu a{padding:.65rem 0;font-weight:700;font-size:.9rem;border-bottom:1px solid #f0f4fb;color:var(--texto);text-decoration:none}
+.mobile-menu a:last-child{border:none}
+.mobile-menu .m-cta{margin-top:.5rem;background:var(--verde);color:#fff!important;text-align:center;padding:.75rem;border-radius:8px;border-bottom:none!important}
+.mobile-menu.open{display:flex}
+@media(max-width:960px){.nav-links{display:none!important}.nav-cta{display:none!important}.nav-hamburger{display:flex!important}}
+@media(max-width:768px){
+.cards-grid{grid-template-columns:1fr!important}
+.porque-inner{grid-template-columns:1fr!important;gap:2.5rem}
+.quienes-inner{grid-template-columns:1fr!important;gap:2.5rem}
+.footer-inner{grid-template-columns:1fr!important;gap:2rem}
+.footer-bottom{flex-direction:column!important;text-align:center}
+.hero-content{padding:7rem 1.5rem 3rem!important}
+.propiedades{padding:4rem 1.5rem!important}
+.porque{padding:4rem 1.5rem!important}
+.quienes{padding:4rem 1.5rem!important}
+.cta{padding:4rem 1.5rem!important}
+}
+@media(max-width:480px){
+.hero h1{font-size:clamp(2.2rem,8vw,3.5rem)!important}
+.hero-stats{flex-direction:column;gap:1rem;padding-top:1.5rem}
+.hero-stat{border-right:none!important;margin-right:0!important;padding:0 0 .75rem!important;border-bottom:1px solid rgba(255,255,255,.12)}
+.hero-stat:last-child{border-bottom:none;padding-bottom:0!important}
+.hero-content{padding:6rem 1.25rem 2.5rem!important}
+.features-grid{grid-template-columns:1fr!important}
+.porque-img-stack{height:auto!important}
+.porque-img-main{position:relative!important;width:100%!important;height:240px!important}
+.porque-img-inset{display:none!important}
+.porque-badge{position:relative!important;right:auto!important;bottom:auto!important;margin-top:1rem;display:inline-block!important}
+.quienes-stats{flex-direction:column;gap:1rem}
+}
 </style>
 </head>
 <body>
@@ -158,7 +192,18 @@ footer{background:#021d4a;color:white;padding:3.5rem 3rem 2rem}
     <li><a href="#blog">Blog</a></li>
   </ul>
   <a href="https://wa.me/526864338446" class="nav-cta">Hablar con un Asesor</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#propiedades">Residencial</a>
+  <a href="#propiedades">Comercial</a>
+  <a href="#propiedades">Casas</a>
+  <a href="#nosotros">Nosotros</a>
+  <a href="#blog">Blog</a>
+  <a href="https://wa.me/526864338446" class="m-cta">Hablar con un Asesor</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -384,5 +429,21 @@ footer{background:#021d4a;color:white;padding:3.5rem 3rem 2rem}
   </div>
 </footer>
 
+<script>
+(function(){
+  var btn = document.getElementById('hamburger');
+  var menu = document.getElementById('mobileMenu');
+  if(btn && menu){
+    btn.addEventListener('click', function(){
+      menu.classList.toggle('open');
+    });
+    menu.querySelectorAll('a').forEach(function(link){
+      link.addEventListener('click', function(){
+        menu.classList.remove('open');
+      });
+    });
+  }
+})();
+</script>
 </body>
 </html>
