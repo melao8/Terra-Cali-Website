@@ -40,10 +40,27 @@ p.body-text{color:var(--texto-claro);line-height:1.8;margin-bottom:1rem}
 @media(max-width:600px){.features-grid{grid-template-columns:1fr}}
 .feature{padding:1.4rem;background:var(--gris);border-radius:12px;border-left:4px solid var(--azul)}
 .feature h4{font-size:.93rem;font-weight:700;margin-bottom:.35rem}.feature p{font-size:.86rem;color:var(--texto-claro);line-height:1.6}
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.2rem}
-.gallery figure{margin:0}.gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;display:block;border:1px solid rgba(8,82,175,.1)}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1.2rem}
+.gallery figure{margin:0;cursor:pointer;position:relative}
+.gallery img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:12px;display:block;border:1px solid rgba(8,82,175,.1);transition:transform .25s,box-shadow .25s}
+.gallery figure:hover img{transform:translateY(-3px);box-shadow:0 10px 26px rgba(8,82,175,.18)}
+.gallery figure::after{content:'\2922';position:absolute;top:.5rem;right:.5rem;width:26px;height:26px;border-radius:50%;background:rgba(5,56,128,.72);color:#fff;font-size:.9rem;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s}
+.gallery figure:hover::after{opacity:1}
 .gallery figcaption{font-size:.78rem;color:var(--texto-claro);text-align:center;margin-top:.4rem}
+@media(max-width:900px){.gallery{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:600px){.gallery{grid-template-columns:repeat(2,1fr);gap:.7rem}}
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:2000;background:rgba(6,14,30,.94);display:none;align-items:center;justify-content:center;flex-direction:column}
+.lb.open{display:flex}
+.lb img{max-width:92vw;max-height:80vh;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.lb-cap{color:#fff;font-size:.95rem;margin-top:1rem;letter-spacing:.02em}
+.lb-count{color:rgba(255,255,255,.55);font-size:.8rem;margin-top:.25rem}
+.lb-close{position:absolute;top:1.1rem;right:1.4rem;background:none;border:none;color:#fff;font-size:2.2rem;line-height:1;cursor:pointer;opacity:.85}
+.lb-close:hover{opacity:1}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.12);border:none;color:#fff;font-size:2rem;width:52px;height:52px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.lb-nav:hover{background:rgba(255,255,255,.28)}
+.lb-prev{left:2%}.lb-next{right:2%}
+@media(max-width:600px){.lb-nav{width:42px;height:42px;font-size:1.5rem}.lb img{max-height:72vh}}
 .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2rem;margin-top:2.5rem}
 .team-card{padding:2.5rem;background:var(--gris);border-radius:16px;text-align:center}
 .team-avatar{width:90px;height:90px;border-radius:50%;background:var(--azul);display:flex;align-items:center;justify-content:center;margin:0 auto 1.2rem;font-size:2.2rem;color:#fff;font-weight:700}
@@ -130,7 +147,7 @@ footer{background:var(--oscuro);color:rgba(255,255,255,.7);padding:60px 5% 30px}
 <div class="page-hero">
   <div class="eyebrow">Casa en Venta &middot; Mexicali, B.C.</div>
   <h1>Casa en Venta<br><em>Fracc. Quintas del Rey</em></h1>
-  <p>Casa de una planta con 2 recámaras y patio amplio en Quintas del Rey, Mexicali. Se vende en condiciones actuales: $1,100,000 MXN.</p>
+  <p>Casa de una planta con 2 recámaras y patio amplio en Quintas del Rey, Mexicali. Precio: $1,100,000 MXN.</p>
   <div class="hero-stats">
     <div class="hero-stat"><strong>$1.1M</strong><span>Pesos MXN</span></div>
     <div class="hero-stat"><strong>2</strong><span>Recámaras</span></div>
@@ -145,11 +162,11 @@ footer{background:var(--oscuro);color:rgba(255,255,255,.7);padding:60px 5% 30px}
     <div>
       <div class="section-label">Casa en Venta</div>
       <h2 class="section-title">Quintas del Rey<br><span style="font-size:1.3rem">Mexicali, Baja California</span></h2>
-      <p class="body-text">Casa de una sola planta en el fraccionamiento Quintas del Rey. Cuenta con 2 recámaras, 1 baño completo, sala, cocina con muebles y un patio trasero amplio, además de espacio de estacionamiento al frente.</p>
-      <p class="body-text">Se vende <strong>en condiciones actuales</strong>: una excelente oportunidad para quien busca casa propia a buen precio y quiere darle su toque personal. Colonia habitacional consolidada, tranquila y con todos los servicios.</p>
+      <p class="body-text">Casa de una sola planta en el fraccionamiento Quintas del Rey. Cuenta con 2 recámaras, 1 baño completo, sala, cocina con muebles y un patio trasero amplio. Al frente tiene amplio espacio para jardín o hasta dos vehículos.</p>
+      <p class="body-text">Una excelente oportunidad para quien busca casa propia a buen precio y quiere darle su toque personal. Colonia habitacional consolidada, tranquila y con todos los servicios.</p>
       <div class="attr-grid">
         <div class="attr-item"><strong>$1,100,000</strong><span>Precio en pesos MXN</span></div>
-        <div class="attr-item"><strong>En condiciones actuales</strong><span>Se vende como está</span></div>
+        <div class="attr-item"><strong>1 planta</strong><span>Una sola planta</span></div>
         <div class="attr-item"><strong>2 rec. &middot; 1 baño</strong><span>Distribución</span></div>
         <div class="attr-item"><strong>58 / 120 m²</strong><span>Construcción / Terreno</span></div>
       </div>
@@ -162,7 +179,7 @@ footer{background:var(--oscuro);color:rgba(255,255,255,.7);padding:60px 5% 30px}
       </div>
     </div>
     <div>
-      <div style="border-radius:16px;overflow:hidden;border:2px solid rgba(8,82,175,.1)"><img src="assets/img/qr-fachada.jpg" alt="Casa en venta en Quintas del Rey, Mexicali" style="width:100%;display:block"/>
+      <div style="border-radius:16px;overflow:hidden;border:2px solid rgba(8,82,175,.1)"><img src="assets/img/qr-entrada.jpg" alt="Entrada a la casa por la reja, Quintas del Rey, Mexicali" style="width:100%;display:block"/>
       </div>
       <div style="margin-top:1rem;border-radius:12px;overflow:hidden;height:220px">
         <iframe src="https://maps.google.com/maps?q=32.583410,-115.476583&amp;z=15&amp;output=embed" width="100%" height="220" style="border:0;border-radius:12px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación aproximada — Quintas del Rey, Mexicali"></iframe>
@@ -172,15 +189,22 @@ footer{background:var(--oscuro);color:rgba(255,255,255,.7);padding:60px 5% 30px}
   </div>
   <div style="margin-top:3rem">
     <div class="section-label">Galería de la propiedad</div>
-    <div class="gallery">
-      <figure><img src="assets/img/qr-frente.jpg" alt="Fachada de la casa desde el patio" loading="lazy"/><figcaption>Fachada y patio</figcaption></figure>
+    <p style="font-size:.84rem;color:var(--texto-claro);margin:.3rem 0 0">Toca cualquier foto para verla en grande y pasar la presentación.</p>
+    <div class="gallery" id="qr-gallery">
+      <figure><img src="assets/img/qr-fachada.jpg" alt="Fachada de la casa" loading="lazy"/><figcaption>Fachada</figcaption></figure>
+      <figure><img src="assets/img/qr-frente.jpg" alt="Frente de la casa" loading="lazy"/><figcaption>Frente</figcaption></figure>
+      <figure><img src="assets/img/qr-frente-2.jpg" alt="Frente de la casa, otra vista" loading="lazy"/><figcaption>Frente &mdash; otra vista</figcaption></figure>
       <figure><img src="assets/img/qr-sala.jpg" alt="Sala de la casa" loading="lazy"/><figcaption>Sala</figcaption></figure>
       <figure><img src="assets/img/qr-cocina.jpg" alt="Cocina con muebles" loading="lazy"/><figcaption>Cocina</figcaption></figure>
-      <figure><img src="assets/img/qr-recamara.jpg" alt="Recámara principal" loading="lazy"/><figcaption>Recámara 1</figcaption></figure>
-      <figure><img src="assets/img/qr-recamara2.jpg" alt="Segunda recámara con clóset" loading="lazy"/><figcaption>Recámara 2</figcaption></figure>
+      <figure><img src="assets/img/qr-recamara-principal.jpg" alt="Recámara principal" loading="lazy"/><figcaption>Recámara principal</figcaption></figure>
+      <figure><img src="assets/img/qr-recamara-principal-2.jpg" alt="Recámara principal, otra vista" loading="lazy"/><figcaption>Recámara principal</figcaption></figure>
+      <figure><img src="assets/img/qr-recamara-2.jpg" alt="Segunda recámara" loading="lazy"/><figcaption>Segunda recámara</figcaption></figure>
+      <figure><img src="assets/img/qr-recamara-2b.jpg" alt="Segunda recámara, otra vista" loading="lazy"/><figcaption>Segunda recámara</figcaption></figure>
       <figure><img src="assets/img/qr-bano.jpg" alt="Baño completo" loading="lazy"/><figcaption>Baño</figcaption></figure>
-      <figure><img src="assets/img/qr-regadera.jpg" alt="Área de regadera con azulejo" loading="lazy"/><figcaption>Regadera</figcaption></figure>
-      <figure><img src="assets/img/qr-patio.jpg" alt="Patio trasero amplio" loading="lazy"/><figcaption>Patio trasero</figcaption></figure>
+      <figure><img src="assets/img/qr-patio-1.jpg" alt="Jardín trasero" loading="lazy"/><figcaption>Jardín trasero</figcaption></figure>
+      <figure><img src="assets/img/qr-patio-2.jpg" alt="Jardín trasero, otra vista" loading="lazy"/><figcaption>Jardín trasero</figcaption></figure>
+      <figure><img src="assets/img/qr-patio-3.jpg" alt="Jardín trasero, vista lateral" loading="lazy"/><figcaption>Jardín trasero</figcaption></figure>
+      <figure><img src="assets/img/qr-pasillo.jpg" alt="Pasillo exterior" loading="lazy"/><figcaption>Pasillo exterior</figcaption></figure>
     </div>
   </div>
 </div>
@@ -206,11 +230,33 @@ footer{background:var(--oscuro);color:rgba(255,255,255,.7);padding:60px 5% 30px}
     </div>
     <div class="feature">
       <h4>Lista para tu toque</h4>
-      <p>Se vende en condiciones actuales. Precio accesible para remodelar y personalizar a tu gusto.</p>
+      <p>Precio accesible para remodelar y personalizar a tu gusto.</p>
     </div>
-    <div class="feature">
-      <h4>Venta directa sin agencia</h4>
-      <p>Trato directo con Terra Cali. Sin comisiones de intermediarios. Proceso transparente de inicio a fin.</p>
+  </div>
+</div>
+</section>
+
+<section style="padding:80px 5%">
+<div class="inner">
+  <div class="section-label">Otra casa en venta</div>
+  <h2 class="section-title" style="margin-bottom:2rem">Casa Moderna &middot; Cd. Obregón, Sonora</h2>
+  <div class="two-col">
+    <div>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.5rem;margin-bottom:1rem">Zona Norte, Ciudad Obregón</h3>
+      <p class="body-text">Casa de diseño moderno minimalista con amplios espacios, cochera doble techada y acabados de calidad, en la exclusiva Zona Norte de Ciudad Obregón, reconocida por su tranquilidad y buen ambiente familiar. Zona con fácil acceso a escuelas, hospitales y avenidas principales.</p>
+      <div class="attr-grid">
+        <div class="attr-item"><strong>$6,000,000</strong><span>Precio en pesos MXN</span></div>
+        <div class="attr-item"><strong>Negociable</strong><span>Precio de venta</span></div>
+        <div class="attr-item"><strong>Zona Norte</strong><span>Colonia exclusiva</span></div>
+        <div class="attr-item"><strong>Cochera doble</strong><span>Techada</span></div>
+      </div>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem">
+        <a href="https://wa.me/526864338446?text=Hola%2C%20me%20interesa%20la%20casa%20en%20Zona%20Norte%2C%20Cd.%20Obregon" class="btn-wa" target="_blank" rel="noopener">&#128242; Consultar por WhatsApp</a>
+        <a href="contacto.html" style="padding:.85rem 1.8rem;border-radius:40px;font-weight:700;font-size:.93rem;background:var(--gris);color:var(--azul);border:1.5px solid var(--azul);transition:.2s">Solicitar informes</a>
+      </div>
+    </div>
+    <div>
+      <div style="border-radius:16px;overflow:hidden;border:2px solid rgba(8,82,175,.1)"><img src="assets/img/4f3d26676e.jpg" alt="Casa Moderna Zona Norte, Ciudad Obregón" style="width:100%;display:block"/></div>
     </div>
   </div>
 </div>
@@ -244,5 +290,31 @@ footer{background:var(--oscuro);color:rgba(255,255,255,.7);padding:60px 5% 30px}
     <span class="footer-tagline">Donde tu historia comienza</span>
   </div>
 </footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Galería de fotos">
+  <button class="lb-close" onclick="closeLb()" aria-label="Cerrar">&times;</button>
+  <button class="lb-nav lb-prev" onclick="lbNav(-1)" aria-label="Anterior">&#8249;</button>
+  <img id="lb-img" src="" alt=""/>
+  <button class="lb-nav lb-next" onclick="lbNav(1)" aria-label="Siguiente">&#8250;</button>
+  <div class="lb-cap" id="lb-cap"></div>
+  <div class="lb-count" id="lb-count"></div>
+</div>
+
 <script>document.querySelectorAll('#mob a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('mob').classList.remove('open')})})</script>
+<script>
+(function(){
+  var figs=[].slice.call(document.querySelectorAll('#qr-gallery figure'));
+  if(!figs.length)return;
+  var items=figs.map(function(f){var i=f.querySelector('img');var c=f.querySelector('figcaption');return{src:i.getAttribute('src'),cap:c?c.textContent:''};});
+  var idx=0;
+  var lb=document.getElementById('lb'),img=document.getElementById('lb-img'),cap=document.getElementById('lb-cap'),cnt=document.getElementById('lb-count');
+  function show(){img.src=items[idx].src;img.alt=items[idx].cap;cap.textContent=items[idx].cap;cnt.textContent=(idx+1)+' / '+items.length;}
+  window.openLb=function(i){idx=i;show();lb.classList.add('open');document.body.style.overflow='hidden';};
+  window.closeLb=function(){lb.classList.remove('open');document.body.style.overflow='';};
+  window.lbNav=function(d){idx=(idx+d+items.length)%items.length;show();};
+  figs.forEach(function(f,i){f.addEventListener('click',function(){openLb(i);});});
+  lb.addEventListener('click',function(e){if(e.target===lb)closeLb();});
+  document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;if(e.key==='Escape')closeLb();else if(e.key==='ArrowLeft')lbNav(-1);else if(e.key==='ArrowRight')lbNav(1);});
+})();
+</script>
 </body></html>
