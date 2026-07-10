@@ -135,7 +135,24 @@ footer{background:var(--oscuro);color:rgba(255,255,255,.7);padding:60px 5% 30px}
 .footer-bottom{max-width:1100px;margin:0 auto;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;font-size:.8rem}
 .footer-tagline{color:rgba(255,255,255,.4);font-style:italic}
 @media(max-width:768px){.footer-inner{grid-template-columns:1fr;gap:2rem}.footer-bottom{flex-direction:column;text-align:center}}
-@media(max-width:480px){.page-hero{padding:130px 4% 60px}.hero-stats{gap:1.5rem}}</style></head><body>
+@media(max-width:480px){.page-hero{padding:130px 4% 60px}.hero-stats{gap:1.5rem}}</style><!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1013558301060333');
+fbq('track','PageView');
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('a[href*="wa.me"],a[href^="tel:"],a[href^="mailto:"]').forEach(function(a){
+    a.addEventListener('click',function(){if(window.fbq)fbq('track','Contact');});
+  });
+});
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1013558301060333&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel -->
+</head><body>
 <nav><div class="nav-inner">
   <a href="index.html" class="nav-logo"><img src="assets/img/f149514250.jpg" alt="Terra Cali"/></a>
   <ul class="nav-links"><li><a href="index.html">Inicio</a></li><li><a href="residencial.html">Residencial</a></li><li><a href="comercial.html">Comercial</a></li><li><a href="casas.html" class="active">Casas</a></li><li><a href="nosotros.html">Nosotros</a></li><li><a href="contacto.html">Contacto</a></li><li><a href="blog.html">Blog</a></li></ul>
