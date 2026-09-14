@@ -154,6 +154,14 @@ document.addEventListener('DOMContentLoaded',function(){
 .lot-wa:hover{background:#1da854}
 .plano-box{margin-top:2rem;border-radius:16px;overflow:hidden;border:1px solid rgba(8,82,175,.12);background:var(--gris)}
 .plano-box img{display:block;width:100%;height:auto}
+.mz-avail{display:flex;flex-direction:column;gap:.8rem;margin-top:2rem}
+.mz-row{display:flex;align-items:center;gap:.9rem;flex-wrap:wrap;padding:.85rem 1.1rem;background:#fff;border:1px solid rgba(8,82,175,.1);border-radius:12px}
+.mz-name{font-weight:700;font-size:.85rem;color:var(--oscuro);min-width:110px}
+.mz-pills{display:flex;gap:.4rem;flex-wrap:wrap}
+.pill{font-size:.8rem;font-weight:700;padding:.28rem .62rem;border-radius:8px;background:var(--gris);color:var(--texto-claro)}
+.pill.p{background:rgba(17,115,114,.12);color:var(--verde)}
+.mz-legend{display:flex;gap:1.3rem;flex-wrap:wrap;font-size:.8rem;color:var(--texto-claro);margin-top:1rem;align-items:center}
+.mz-dot{display:inline-block;width:12px;height:12px;border-radius:4px;vertical-align:-1px;margin-right:.35rem}
 .pay-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:1.5rem}
 @media(max-width:600px){.pay-grid{grid-template-columns:1fr}}
 .pay-card{padding:1.6rem;background:#fff;border:1px solid rgba(8,82,175,.12);border-radius:14px}
@@ -164,18 +172,18 @@ document.addEventListener('DOMContentLoaded',function(){
 <nav><div class="nav-inner">
   <a href="index.html" class="nav-logo"><img src="assets/img/f149514250.jpg" alt="Terra Cali"/></a>
   <ul class="nav-links"><li><a href="index.html">Inicio</a></li><li><a href="residencial.html">Residencial</a></li><li><a href="islas-agrarias.html" class="active">Islas Agrarias</a></li><li><a href="comercial.html">Comercial</a></li><li><a href="casas.html">Casas</a></li><li><a href="nosotros.html">Nosotros</a></li><li><a href="contacto.html">Contacto</a></li><li><a href="blog.html">Blog</a></li></ul>
-  <a href="https://wa.me/526864338446" class="nav-cta" target="_blank" rel="noopener">Hablar con un Asesor</a>
+  <a href="https://wa.me/526646120031" class="nav-cta" target="_blank" rel="noopener">Hablar con un Asesor</a>
   <button class="nav-hamburger" onclick="document.getElementById('mob').classList.toggle('open')" aria-label="Abrir menu"><span></span><span></span><span></span></button>
 </div></nav>
-<div class="mobile-menu" id="mob"><a href="index.html">Inicio</a><a href="residencial.html">Residencial</a><a href="islas-agrarias.html">Islas Agrarias</a><a href="comercial.html">Comercial</a><a href="casas.html">Casas</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a><a href="blog.html">Blog</a><a href="https://wa.me/526864338446" class="m-cta" target="_blank" rel="noopener">&#128242; Hablar con un Asesor</a></div>
+<div class="mobile-menu" id="mob"><a href="index.html">Inicio</a><a href="residencial.html">Residencial</a><a href="islas-agrarias.html">Islas Agrarias</a><a href="comercial.html">Comercial</a><a href="casas.html">Casas</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a><a href="blog.html">Blog</a><a href="https://wa.me/526646120031" class="m-cta" target="_blank" rel="noopener">&#128242; Hablar con un Asesor</a></div>
 
 <div class="page-hero">
   <div class="eyebrow">Terrenos Habitacionales &middot; Mexicali, B.C.</div>
   <h1>Ampliación<br><em>Islas Agrarias</em></h1>
-  <p>Lotes habitacionales en un fraccionamiento autorizado y regularizado, con lotificación oficial y servicios de luz, agua y drenaje en la zona. Listos para escriturar.</p>
+  <p>Lotes habitacionales en fraccionamiento autorizado, frente al campo de beisbol y a 5 minutos de Plaza Sendero. Terreno rústico por urbanizar, con redes de servicios en la zona y listo para escriturar.</p>
   <div class="hero-stats">
     <div class="hero-stat"><strong>144</strong><span>Lotes en 9 manzanas</span></div>
-    <div class="hero-stat"><strong>5</strong><span>Lotes disponibles</span></div>
+    <div class="hero-stat"><strong>23</strong><span>Lotes disponibles</span></div>
     <div class="hero-stat"><strong>Desde $400,000</strong><span>Precio de contado</span></div>
   </div>
 </div>
@@ -186,8 +194,8 @@ document.addEventListener('DOMContentLoaded',function(){
     <div>
       <div class="section-label">El fraccionamiento</div>
       <h2 class="section-title">Ampliación Islas Agrarias</h2>
-      <p class="body-text">Fraccionamiento habitacional en el oriente de Mexicali, con lotificación autorizada por la Comisión para la Regularización de la Tenencia de la Tierra del Estado, Gobierno de Baja California. Clasificado como área de asentamientos humanos en zona urbana, uso habitacional.</p>
-      <p class="body-text">Son 144 lotes distribuidos en 9 manzanas, con vialidades ya trazadas: avenidas Canalero, Empacadores, Parcelero, Trilladores y Zapadores, y calles Agraristas, Idealistas y 27 de Enero. Acceso por la Carretera a Islas Agrarias y Calle 27 de Enero.</p>
+      <p class="body-text">Fraccionamiento habitacional en Mexicali, frente al campo de beisbol y a 5 minutos de Plaza Sendero. Lotificación autorizada por la Comisión para la Regularización de la Tenencia de la Tierra del Estado, Gobierno de Baja California, con clasificación de uso habitacional.</p>
+      <p class="body-text">Es terreno rústico por urbanizar: sin pavimento ni banquetas todavía, con las vialidades trazadas en el plano oficial (avenidas Canalero, Empacadores, Parcelero, Trilladores y Zapadores, y calles Agraristas, Idealistas y 27 de Enero). Precio accesible para que construyas a tu ritmo. Son 144 lotes en 9 manzanas.</p>
       <div class="attr-grid">
         <div class="attr-item"><strong>144 lotes</strong><span>En 9 manzanas</span></div>
         <div class="attr-item"><strong>52,880 m&#178;</strong><span>Superficie total</span></div>
@@ -195,7 +203,7 @@ document.addEventListener('DOMContentLoaded',function(){
         <div class="attr-item"><strong>100% legal</strong><span>Listo para escriturar</span></div>
       </div>
       <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem">
-        <a href="https://wa.me/526864338446?text=Hola%2C%20quiero%20informes%20de%20Ampliaci%C3%B3n%20Islas%20Agrarias" class="btn-wa" target="_blank" rel="noopener">&#128242; Preguntar por WhatsApp</a>
+        <a href="https://wa.me/526646120031?text=Hola%2C%20quiero%20informes%20de%20Ampliaci%C3%B3n%20Islas%20Agrarias" class="btn-wa" target="_blank" rel="noopener">&#128242; Preguntar por WhatsApp</a>
         <a href="contacto.html" style="padding:.85rem 1.8rem;border-radius:40px;font-weight:700;font-size:.93rem;background:var(--gris);color:var(--azul);border:1.5px solid var(--azul);transition:.2s">Solicitar informes</a>
       </div>
     </div>
@@ -203,7 +211,7 @@ document.addEventListener('DOMContentLoaded',function(){
       <div style="background:var(--gris);border-radius:16px;overflow:hidden;height:320px;margin-bottom:1rem">
         <iframe src="https://www.google.com/maps?q=Islas%20Agrarias%20Mexicali&output=embed" width="100%" height="320" style="border:0;border-radius:16px" allowfullscreen="" loading="lazy" title="Ampliación Islas Agrarias, Mexicali"></iframe>
       </div>
-      <p style="font-size:.82rem;color:var(--texto-claro);text-align:center">Oriente de Mexicali, sobre la Carretera a Islas Agrarias</p>
+      <p style="font-size:.82rem;color:var(--texto-claro);text-align:center">Frente al campo de beisbol, a 5 minutos de Plaza Sendero</p>
     </div>
   </div>
 </div>
@@ -213,7 +221,7 @@ document.addEventListener('DOMContentLoaded',function(){
 <div class="inner">
   <div class="section-label">Inventario</div>
   <h2 class="section-title">Lotes disponibles</h2>
-  <p class="section-sub">Estos son los lotes disponibles dentro del fraccionamiento. El resto está vendido. Precios en pesos mexicanos, de contado.</p>
+  <p class="section-sub">Estos son ejemplos con precio confirmado. Más abajo está la lista completa de los 23 lotes disponibles por manzana. Precios en pesos mexicanos, de contado.</p>
   <div class="lots-grid">
     <div class="lot-card">
       <span class="lot-badge">Disponible</span>
@@ -221,7 +229,7 @@ document.addEventListener('DOMContentLoaded',function(){
       <div class="lot-size">200 m&#178;<small>200.19 m&#178; &middot; 10.01 &times; 20.02 m</small></div>
       <div class="lot-loc">Frente a Avenida Empacadores</div>
       <div class="lot-price">$400,000<span>Precio de contado (MXN)</span></div>
-      <a href="https://wa.me/526864338446?text=Hola%2C%20me%20interesa%20el%20Lote%202%20de%20la%20Manzana%2002%20(200%20m2)%20en%20Ampliaci%C3%B3n%20Islas%20Agrarias" class="lot-wa" target="_blank" rel="noopener">&#128242; Apartar este lote</a>
+      <a href="https://wa.me/526646120031?text=Hola%2C%20me%20interesa%20el%20Lote%202%20de%20la%20Manzana%2002%20(200%20m2)%20en%20Ampliaci%C3%B3n%20Islas%20Agrarias" class="lot-wa" target="_blank" rel="noopener">&#128242; Apartar este lote</a>
     </div>
     <div class="lot-card esq">
       <span class="lot-badge esq">Disponible &middot; Esquina</span>
@@ -229,7 +237,7 @@ document.addEventListener('DOMContentLoaded',function(){
       <div class="lot-size">395 m&#178;<small>395.31 m&#178; &middot; 20.04 &times; 19.70 m</small></div>
       <div class="lot-loc">Esquina de Av. Trilladores y Calle Idealistas</div>
       <div class="lot-price">$800,000<span>Precio de contado (MXN)</span></div>
-      <a href="https://wa.me/526864338446?text=Hola%2C%20me%20interesa%20el%20Lote%2016%20de%20la%20Manzana%2003%20(395%20m2%2C%20esquina)%20en%20Ampliaci%C3%B3n%20Islas%20Agrarias" class="lot-wa" target="_blank" rel="noopener">&#128242; Apartar este lote</a>
+      <a href="https://wa.me/526646120031?text=Hola%2C%20me%20interesa%20el%20Lote%2016%20de%20la%20Manzana%2003%20(395%20m2%2C%20esquina)%20en%20Ampliaci%C3%B3n%20Islas%20Agrarias" class="lot-wa" target="_blank" rel="noopener">&#128242; Apartar este lote</a>
     </div>
     <div class="lot-card">
       <span class="lot-badge">Disponible</span>
@@ -237,15 +245,7 @@ document.addEventListener('DOMContentLoaded',function(){
       <div class="lot-size">200 m&#178;<small>200.19 m&#178; &middot; 10.01 &times; 20.02 m</small></div>
       <div class="lot-loc">Frente a Avenida Empacadores</div>
       <div class="lot-price">$400,000<span>Precio de contado (MXN)</span></div>
-      <a href="https://wa.me/526864338446?text=Hola%2C%20me%20interesa%20el%20Lote%205%20de%20la%20Manzana%2006%20(200%20m2)%20en%20Ampliaci%C3%B3n%20Islas%20Agrarias" class="lot-wa" target="_blank" rel="noopener">&#128242; Apartar este lote</a>
-    </div>
-    <div class="lot-card esq">
-      <span class="lot-badge esq">Disponible &middot; Esquina</span>
-      <div class="lot-mz">Manzana 06 · Lote 23</div>
-      <div class="lot-size">230 m&#178;<small>229.76 m&#178; &middot; lote en esquina</small></div>
-      <div class="lot-loc">Esquina de Av. Parcelero y Calle 27 de Enero</div>
-      <div class="lot-price">$500,000<span>Precio de contado (MXN)</span></div>
-      <a href="https://wa.me/526864338446?text=Hola%2C%20me%20interesa%20el%20Lote%2023%20de%20la%20Manzana%2006%20(230%20m2%2C%20esquina)%20en%20Ampliaci%C3%B3n%20Islas%20Agrarias" class="lot-wa" target="_blank" rel="noopener">&#128242; Apartar este lote</a>
+      <a href="https://wa.me/526646120031?text=Hola%2C%20me%20interesa%20el%20Lote%205%20de%20la%20Manzana%2006%20(200%20m2)%20en%20Ampliaci%C3%B3n%20Islas%20Agrarias" class="lot-wa" target="_blank" rel="noopener">&#128242; Apartar este lote</a>
     </div>
     <div class="lot-card esq">
       <span class="lot-badge esq">Disponible &middot; Esquina</span>
@@ -253,13 +253,27 @@ document.addEventListener('DOMContentLoaded',function(){
       <div class="lot-size">400 m&#178;<small>399.96 m&#178; &middot; 20.00 &times; 20.03 m</small></div>
       <div class="lot-loc">Esquina de Av. Parcelero y Calle Idealistas</div>
       <div class="lot-price">$800,000<span>Precio de contado (MXN)</span></div>
-      <a href="https://wa.me/526864338446?text=Hola%2C%20me%20interesa%20el%20Lote%201%20de%20la%20Manzana%2007%20(400%20m2%2C%20esquina)%20en%20Ampliaci%C3%B3n%20Islas%20Agrarias" class="lot-wa" target="_blank" rel="noopener">&#128242; Apartar este lote</a>
+      <a href="https://wa.me/526646120031?text=Hola%2C%20me%20interesa%20el%20Lote%201%20de%20la%20Manzana%2007%20(400%20m2%2C%20esquina)%20en%20Ampliaci%C3%B3n%20Islas%20Agrarias" class="lot-wa" target="_blank" rel="noopener">&#128242; Apartar este lote</a>
     </div>
   </div>
-  <div class="plano-box">
-    <img src="assets/img/ia-plano-disponibles.jpg" alt="Plano de Ampliación Islas Agrarias con los lotes disponibles resaltados" loading="lazy"/>
+  <h3 style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--oscuro);margin-top:3rem;margin-bottom:.4rem">Disponibilidad completa por manzana</h3>
+  <p style="font-size:.9rem;color:var(--texto-claro);margin-bottom:.5rem">23 lotes disponibles en total. Los marcados en verde tienen precio confirmado (arriba). Los demás mantienen el mismo precio base de $2,000/m&#178;; pregunta medidas y precio exacto por WhatsApp.</p>
+  <div class="mz-avail">
+    <div class="mz-row"><span class="mz-name">Manzana 1</span><div class="mz-pills"><span class="pill">Lote 7</span><span class="pill">Lote 13</span></div></div>
+    <div class="mz-row"><span class="mz-name">Manzana 2</span><div class="mz-pills"><span class="pill p">Lote 2 · $400,000</span></div></div>
+    <div class="mz-row"><span class="mz-name">Manzana 3</span><div class="mz-pills"><span class="pill">Lote 3</span><span class="pill p">Lote 16 · $800,000</span></div></div>
+    <div class="mz-row"><span class="mz-name">Manzana 4</span><div class="mz-pills"><span class="pill">Lote 8</span><span class="pill">Lote 9</span><span class="pill">Lote 11</span><span class="pill">Lote 12</span><span class="pill">Lote 14</span></div></div>
+    <div class="mz-row"><span class="mz-name">Manzana 5</span><div class="mz-pills"><span class="pill">Lote 7</span><span class="pill">Lote 10</span><span class="pill">Lote 15</span></div></div>
+    <div class="mz-row"><span class="mz-name">Manzana 6</span><div class="mz-pills"><span class="pill">Lote 1</span><span class="pill p">Lote 5 · $400,000</span><span class="pill">Lote 10</span><span class="pill">Lote 13</span></div></div>
+    <div class="mz-row"><span class="mz-name">Manzana 7</span><div class="mz-pills"><span class="pill p">Lote 1 · $800,000</span><span class="pill">Lote 10</span><span class="pill">Lote 11</span><span class="pill">Lote 12</span><span class="pill">Lote 13</span><span class="pill">Lote 19</span></div></div>
   </div>
-  <p style="font-size:.82rem;color:var(--texto-claro);text-align:center;margin-top:1rem">Los lotes resaltados en el plano están disponibles. El resto del fraccionamiento se encuentra vendido.</p>
+  <div class="mz-legend">
+    <span><span class="mz-dot" style="background:rgba(17,115,114,.4)"></span>Precio confirmado</span>
+    <span><span class="mz-dot" style="background:#e6ebf4"></span>Disponible · cotiza por WhatsApp</span>
+  </div>
+  <div style="text-align:center;margin-top:1.8rem">
+    <a href="https://wa.me/526646120031?text=Hola%2C%20quiero%20la%20lista%20de%20lotes%20disponibles%20y%20precios%20de%20Ampliaci%C3%B3n%20Islas%20Agrarias" class="btn-wa" target="_blank" rel="noopener">&#128242; Pedir lista completa y precios</a>
+  </div>
 </div>
 </section>
 
@@ -273,7 +287,7 @@ document.addEventListener('DOMContentLoaded',function(){
     <div class="attr-item"><strong>230 m&#178;</strong><span>$500,000 &middot; esquina</span></div>
     <div class="attr-item"><strong>400 m&#178;</strong><span>$800,000 &middot; esquina</span></div>
   </div>
-  <p class="body-text" style="margin-top:1.2rem">Base de $2,000/m&#178; para lotes interiores. El lote de 230 m&#178; en esquina (Mz 06 · Lote 23) lleva un plus por ubicación que lo cierra en $500,000. El precio exacto de cada lote se confirma por escrito en el contrato de compraventa.</p>
+  <p class="body-text" style="margin-top:1.2rem">Base de $2,000/m&#178; para lotes interiores. Un lote de 230 m&#178; en esquina lleva un plus por ubicación que lo cierra en $500,000. El precio exacto de cada lote se confirma por escrito en el contrato de compraventa.</p>
 </div>
 </section>
 
@@ -294,12 +308,12 @@ document.addEventListener('DOMContentLoaded',function(){
 <div class="inner">
   <div class="section-label">Infraestructura y servicios</div>
   <h2 class="section-title">Servicios en el fraccionamiento</h2>
-  <p class="section-sub">El fraccionamiento cuenta con redes de servicios públicos en la zona. Las tomas no están instaladas dentro del lote: cada servicio lo contrata directamente el comprador ante la dependencia correspondiente.</p>
+  <p class="section-sub">Hay redes de servicios públicos en la zona. Las tomas no están instaladas dentro del lote: cada servicio lo contrata directamente el comprador ante la dependencia correspondiente.</p>
   <div class="features-grid">
-    <div class="feature"><h4>Energía eléctrica &middot; CFE</h4><p>Red de energía eléctrica en el fraccionamiento. La contratación de la toma se realiza ante CFE.</p></div>
-    <div class="feature"><h4>Agua potable y drenaje &middot; CESPM</h4><p>Redes de agua potable y drenaje en la zona. Las tomas se contratan ante CESPM.</p></div>
-    <div class="feature"><h4>Vialidades trazadas</h4><p>Avenidas y calles ya trazadas conforme al plano oficial de lotificación.</p></div>
-    <div class="feature"><h4>Zona urbana consolidada</h4><p>Área de asentamientos humanos con uso habitacional y crecimiento en el oriente de Mexicali.</p></div>
+    <div class="feature"><h4>Energía eléctrica &middot; CFE</h4><p>Red de energía eléctrica en la zona. La contratación de la toma se realiza directamente ante CFE.</p></div>
+    <div class="feature"><h4>Agua potable y drenaje &middot; CESPM</h4><p>Redes de agua potable y drenaje en la zona. Las tomas se contratan directamente ante CESPM.</p></div>
+    <div class="feature"><h4>Terreno rústico por urbanizar</h4><p>Lotes sin pavimento ni banquetas todavía. Por eso el precio es accesible: construyes a tu ritmo.</p></div>
+    <div class="feature"><h4>Ubicación</h4><p>Frente al campo de beisbol y a 5 minutos de Plaza Sendero, en Mexicali.</p></div>
   </div>
 </div>
 </section>
@@ -334,7 +348,7 @@ document.addEventListener('DOMContentLoaded',function(){
   <h2>¿Te interesa alguno de estos lotes?</h2>
   <p>Escríbenos para apartarlo o para agendar la visita al lote. Te compartimos la documentación del predio antes de cualquier pago.</p>
   <div class="cta-btns">
-    <a href="https://wa.me/526864338446?text=Hola%2C%20quiero%20informes%20de%20Ampliaci%C3%B3n%20Islas%20Agrarias" class="btn-wa" target="_blank" rel="noopener">&#128242; WhatsApp directo</a>
+    <a href="https://wa.me/526646120031?text=Hola%2C%20quiero%20informes%20de%20Ampliaci%C3%B3n%20Islas%20Agrarias" class="btn-wa" target="_blank" rel="noopener">&#128242; WhatsApp directo</a>
     <a href="contacto.html" class="btn-outline">Más opciones de contacto</a>
   </div>
 </section>
@@ -360,7 +374,7 @@ document.addEventListener('DOMContentLoaded',function(){
       <li><a href="contacto.html">Contacto</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="mailto:info@terracali.com.mx">info@terracali.com.mx</a></li>
-      <li><a href="tel:+526866810259">(686) 681-0259</a></li>
+      <li><a href="tel:+526646120031">(664) 612-0031</a></li>
     </ul></div>
   </div>
   <div class="footer-bottom">

@@ -142,10 +142,10 @@ document.addEventListener('DOMContentLoaded',function(){
 <nav><div class="nav-inner">
   <a href="index.html" class="nav-logo"><img src="assets/img/f149514250.jpg" alt="Terra Cali"/></a>
   <ul class="nav-links"><li><a href="index.html">Inicio</a></li><li><a href="residencial.html" class="active">Residencial</a></li><li><a href="islas-agrarias.html">Islas Agrarias</a></li><li><a href="comercial.html">Comercial</a></li><li><a href="casas.html">Casas</a></li><li><a href="nosotros.html">Nosotros</a></li><li><a href="contacto.html">Contacto</a></li><li><a href="blog.html">Blog</a></li></ul>
-  <a href="https://wa.me/526864338446" class="nav-cta" target="_blank" rel="noopener">Hablar con un Asesor</a>
+  <a href="https://wa.me/526646120031" class="nav-cta" target="_blank" rel="noopener">Hablar con un Asesor</a>
   <button class="nav-hamburger" onclick="document.getElementById('mob').classList.toggle('open')" aria-label="Abrir menu"><span></span><span></span><span></span></button>
 </div></nav>
-<div class="mobile-menu" id="mob"><a href="index.html">Inicio</a><a href="residencial.html">Residencial</a><a href="islas-agrarias.html">Islas Agrarias</a><a href="comercial.html">Comercial</a><a href="casas.html">Casas</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a><a href="blog.html">Blog</a><a href="https://wa.me/526864338446" class="m-cta" target="_blank" rel="noopener">&#128242; Hablar con un Asesor</a></div>
+<div class="mobile-menu" id="mob"><a href="index.html">Inicio</a><a href="residencial.html">Residencial</a><a href="islas-agrarias.html">Islas Agrarias</a><a href="comercial.html">Comercial</a><a href="casas.html">Casas</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a><a href="blog.html">Blog</a><a href="https://wa.me/526646120031" class="m-cta" target="_blank" rel="noopener">&#128242; Hablar con un Asesor</a></div>
 
 <div class="page-hero">
   <div class="eyebrow">Terrenos Habitacionales &middot; Mexicali, B.C.</div>
@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded',function(){
         <div class="attr-item"><strong>100% legal</strong><span>Escrituración garantizada</span></div>
       </div>
       <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem">
-        <a href="https://wa.me/526864338446?text=Hola%2C%20quiero%20informes%20del%20Fracc.%20San%20Patricio" class="btn-wa" target="_blank" rel="noopener">&#128242; Preguntar por WhatsApp</a>
+        <a href="https://wa.me/526646120031?text=Hola%2C%20quiero%20informes%20del%20Fracc.%20San%20Patricio" class="btn-wa" target="_blank" rel="noopener">&#128242; Preguntar por WhatsApp</a>
         <a href="contacto.html" style="padding:.85rem 1.8rem;border-radius:40px;font-weight:700;font-size:.93rem;background:var(--gris);color:var(--azul);border:1.5px solid var(--azul);transition:.2s">Solicitar informes</a>
       </div>
     </div>
@@ -258,14 +258,14 @@ document.addEventListener('DOMContentLoaded',function(){
         </select>
       </div>
       <div>
-        <label style="display:block;font-size:.82rem;font-weight:700;margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.05em">Enganche (%)</label>
+        <label style="display:block;font-size:.82rem;font-weight:700;margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.05em">Enganche</label>
         <select id="calc-eng" onchange="calcular()" style="width:100%;padding:.75rem 1rem;border:1.5px solid #dde4f0;border-radius:8px;font-family:'Lato',sans-serif;font-size:.95rem;background:#fff">
-          <option value="0" selected>Sin enganche</option>
-          <option value="10">10%</option>
-          <option value="20">20%</option>
-          <option value="30">30%</option>
-          <option value="40">40%</option>
-          <option value="50">50%</option>
+          <option value="10000" selected>$10,000 (mínimo)</option>
+          <option value="20000">$20,000</option>
+          <option value="30000">$30,000</option>
+          <option value="50000">$50,000</option>
+          <option value="100000">$100,000</option>
+          <option value="150000">$150,000</option>
         </select>
       </div>
       <div>
@@ -286,8 +286,8 @@ document.addEventListener('DOMContentLoaded',function(){
     </div>
     <div id="calc-result" style="background:var(--azul);color:#fff;border-radius:12px;padding:1.5rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;text-align:center">
       <div><strong id="r-total" style="display:block;font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700">$400,000</strong><span style="font-size:.75rem;opacity:.8;text-transform:uppercase;letter-spacing:.06em">Precio total</span></div>
-      <div><strong id="r-eng" style="display:block;font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700">$0</strong><span style="font-size:.75rem;opacity:.8;text-transform:uppercase;letter-spacing:.06em">Enganche</span></div>
-      <div><strong id="r-men" style="display:block;font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700">$2,778</strong><span style="font-size:.75rem;opacity:.8;text-transform:uppercase;letter-spacing:.06em">Mensualidad estimada</span></div>
+      <div><strong id="r-eng" style="display:block;font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700">$10,000</strong><span style="font-size:.75rem;opacity:.8;text-transform:uppercase;letter-spacing:.06em">Enganche</span></div>
+      <div><strong id="r-men" style="display:block;font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700">$2,708</strong><span style="font-size:.75rem;opacity:.8;text-transform:uppercase;letter-spacing:.06em">Mensualidad estimada</span></div>
     </div>
     <p style="font-size:.78rem;color:var(--texto-claro);text-align:center;margin-top:1rem;font-style:italic">* Estimación orientativa. El monto exacto se define en contrato. Contáctanos para un plan de pagos personalizado.</p>
   </div>
@@ -339,7 +339,7 @@ document.addEventListener('DOMContentLoaded',function(){
   <h2>Tu terreno en San Patricio te espera</h2>
   <p>Habla con un asesor hoy — te ayudamos a encontrar el lote ideal y el plan de pagos que se ajusta a tu situación.</p>
   <div class="cta-btns">
-    <a href="https://wa.me/526864338446?text=Hola%2C%20quiero%20informes%20del%20Fracc.%20San%20Patricio" class="btn-wa" target="_blank" rel="noopener">&#128242; WhatsApp directo</a>
+    <a href="https://wa.me/526646120031?text=Hola%2C%20quiero%20informes%20del%20Fracc.%20San%20Patricio" class="btn-wa" target="_blank" rel="noopener">&#128242; WhatsApp directo</a>
     <a href="contacto.html" class="btn-outline">Más opciones de contacto</a>
   </div>
 </section>
@@ -348,10 +348,10 @@ document.addEventListener('DOMContentLoaded',function(){
 function fmt(n){return'$'+Math.round(n).toLocaleString('es-MX')}
 function calcular(){
   var m2=parseInt(document.getElementById('calc-size').value);
-  var pct=parseInt(document.getElementById('calc-eng').value)/100;
   var meses=parseInt(document.getElementById('calc-meses').value);
   var total=m2*2500;
-  var eng=total*pct;
+  var eng=parseInt(document.getElementById('calc-eng').value);
+  if(eng>total)eng=total;
   var mensual=(total-eng)/meses;
   document.getElementById('r-total').textContent=fmt(total);
   document.getElementById('r-eng').textContent=fmt(eng);
@@ -381,7 +381,7 @@ calcular();
       <li><a href="contacto.html">Contacto</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="mailto:info@terracali.com.mx">info@terracali.com.mx</a></li>
-      <li><a href="tel:+526866810259">(686) 681-0259</a></li>
+      <li><a href="tel:+526646120031">(664) 612-0031</a></li>
     </ul></div>
   </div>
   <div class="footer-bottom">
