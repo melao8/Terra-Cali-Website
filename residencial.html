@@ -141,22 +141,66 @@ document.addEventListener('DOMContentLoaded',function(){
 <body>
 <nav><div class="nav-inner">
   <a href="index.html" class="nav-logo"><img src="assets/img/f149514250.jpg" alt="Terra Cali"/></a>
-  <ul class="nav-links"><li><a href="index.html">Inicio</a></li><li><a href="residencial.html" class="active">Residencial</a></li><li><a href="islas-agrarias.html">Islas Agrarias</a></li><li><a href="comercial.html">Comercial</a></li><li><a href="casas.html">Casas</a></li><li><a href="nosotros.html">Nosotros</a></li><li><a href="contacto.html">Contacto</a></li><li><a href="blog.html">Blog</a></li></ul>
+  <ul class="nav-links"><li><a href="index.html">Inicio</a></li><li><a href="residencial.html" class="active">Residencial</a></li><li><a href="comercial.html">Comercial</a></li><li><a href="casas.html">Casas</a></li><li><a href="nosotros.html">Nosotros</a></li><li><a href="contacto.html">Contacto</a></li><li><a href="blog.html">Blog</a></li></ul>
   <a href="https://wa.me/526646120031" class="nav-cta" target="_blank" rel="noopener">Hablar con un Asesor</a>
   <button class="nav-hamburger" onclick="document.getElementById('mob').classList.toggle('open')" aria-label="Abrir menu"><span></span><span></span><span></span></button>
 </div></nav>
-<div class="mobile-menu" id="mob"><a href="index.html">Inicio</a><a href="residencial.html">Residencial</a><a href="islas-agrarias.html">Islas Agrarias</a><a href="comercial.html">Comercial</a><a href="casas.html">Casas</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a><a href="blog.html">Blog</a><a href="https://wa.me/526646120031" class="m-cta" target="_blank" rel="noopener">&#128242; Hablar con un Asesor</a></div>
+<div class="mobile-menu" id="mob"><a href="index.html">Inicio</a><a href="residencial.html">Residencial</a><a href="comercial.html">Comercial</a><a href="casas.html">Casas</a><a href="nosotros.html">Nosotros</a><a href="contacto.html">Contacto</a><a href="blog.html">Blog</a><a href="https://wa.me/526646120031" class="m-cta" target="_blank" rel="noopener">&#128242; Hablar con un Asesor</a></div>
 
 <div class="page-hero">
   <div class="eyebrow">Terrenos Habitacionales &middot; Mexicali, B.C.</div>
-  <h1>Fraccionamiento<br><em>San Patricio</em></h1>
-  <p>Lotes habitacionales en Mexicali con financiamiento propio, sin banco. Empieza a construir tu patrimonio desde el primer pago.</p>
+  <h1>Terrenos <em>Habitacionales</em></h1>
+  <p>Dos fraccionamientos habitacionales en Mexicali con planes a tu medida. Elige el desarrollo que mejor te queda y empieza a construir tu patrimonio.</p>
   <div class="hero-stats">
-    <div class="hero-stat"><strong>160 m&#178;</strong><span>Tamaño estándar</span></div>
-    <div class="hero-stat"><strong>Sin banco</strong><span>Financiamiento propio</span></div>
+    <div class="hero-stat"><strong>2</strong><span>Desarrollos</span></div>
+    <div class="hero-stat"><strong>Desde $400,000</strong><span>Precio de lote</span></div>
     <div class="hero-stat"><strong>30+ años</strong><span>Experiencia del equipo</span></div>
   </div>
 </div>
+
+<style>
+.dev-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem}
+@media(max-width:768px){.dev-grid{grid-template-columns:1fr}}
+.dev-card{background:#fff;border:1px solid rgba(8,82,175,.1);border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(8,82,175,.07);display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
+.dev-card:hover{transform:translateY(-6px);box-shadow:0 18px 44px rgba(8,82,175,.15)}
+.dev-img{height:210px;position:relative;overflow:hidden}
+.dev-img img{width:100%;height:100%;object-fit:cover;display:block}
+.dev-badge{position:absolute;top:14px;left:14px;background:var(--azul);color:#fff;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .75rem;border-radius:100px}
+.dev-badge.v{background:var(--verde)}
+.dev-body{padding:1.6rem;display:flex;flex-direction:column;flex:1}
+.dev-loc{font-size:.72rem;color:var(--verde);font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.4rem}
+.dev-body h3{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--oscuro);margin-bottom:.5rem}
+.dev-body p{font-size:.9rem;color:var(--texto-claro);line-height:1.6;margin-bottom:1.2rem;flex:1}
+.dev-link{align-self:flex-start;background:var(--azul);color:#fff;padding:.7rem 1.4rem;border-radius:8px;font-weight:700;font-size:.88rem;transition:.2s}
+.dev-link:hover{background:var(--oscuro)}
+</style>
+<section style="padding:70px 5% 20px">
+<div class="inner">
+  <div class="section-label">Nuestros desarrollos</div>
+  <h2 class="section-title">Dos fraccionamientos habitacionales</h2>
+  <p class="section-sub">Ambos en Mexicali, con acompañamiento legal completo hasta la escritura. Elige el que va contigo.</p>
+  <div class="dev-grid">
+    <div class="dev-card">
+      <div class="dev-img"><img src="assets/img/8fe09d36ad.jpg" alt="Fraccionamiento San Patricio, Mexicali"/><span class="dev-badge">Financiamiento propio</span></div>
+      <div class="dev-body">
+        <div class="dev-loc">Poniente de Mexicali</div>
+        <h3>Fraccionamiento San Patricio</h3>
+        <p>Lotes de 160 m&#178; en una zona en pleno crecimiento. Financiamiento propio sin banco, desde el primer pago. $2,500/m&#178;.</p>
+        <a href="#san-patricio" class="dev-link">Ver San Patricio</a>
+      </div>
+    </div>
+    <div class="dev-card">
+      <div class="dev-img"><img src="assets/img/ia-plano-oficial.jpg" style="object-position:center 20%" alt="Ampliación Islas Agrarias, Mexicali"/><span class="dev-badge v">23 lotes disponibles</span></div>
+      <div class="dev-body">
+        <div class="dev-loc">Frente a Plaza Sendero</div>
+        <h3>Ampliación Islas Agrarias</h3>
+        <p>Lotes de 200 a 400 m&#178; frente al campo de beisbol, a 5 min de Plaza Sendero. De contado o crédito Infonavit, desde $400,000.</p>
+        <a href="islas-agrarias.html" class="dev-link">Ver Islas Agrarias</a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
 
 <section style="padding:0 5% 60px">
 <div class="inner">
@@ -178,7 +222,7 @@ document.addEventListener('DOMContentLoaded',function(){
 </section>
 
 
-<section style="padding:80px 5%">
+<section style="padding:80px 5%" id="san-patricio">
 <div class="inner">
   <div class="two-col">
     <div>
