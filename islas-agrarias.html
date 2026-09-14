@@ -162,6 +162,15 @@ document.addEventListener('DOMContentLoaded',function(){
 .pill.p{background:rgba(17,115,114,.12);color:var(--verde)}
 .mz-legend{display:flex;gap:1.3rem;flex-wrap:wrap;font-size:.8rem;color:var(--texto-claro);margin-top:1rem;align-items:center}
 .mz-dot{display:inline-block;width:12px;height:12px;border-radius:4px;vertical-align:-1px;margin-right:.35rem}
+.lotmap{display:flex;flex-direction:column;gap:.6rem;margin-top:2rem}
+.lm-row{display:flex;align-items:flex-start;gap:.9rem;flex-wrap:wrap;padding:.7rem 1rem;background:#fff;border:1px solid rgba(8,82,175,.1);border-radius:12px}
+.lm-name{font-weight:700;font-size:.8rem;color:var(--oscuro);min-width:92px;padding-top:.35rem}
+.lm-cells{display:flex;gap:.35rem;flex-wrap:wrap}
+.cell{width:30px;height:30px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;background:#e7eaf0;color:#9aa4b5}
+.cell.d{background:var(--verde);color:#fff}
+.cell.d.pr{box-shadow:inset 0 0 0 2px #f5c542}
+.lm-legend{display:flex;gap:1.3rem;flex-wrap:wrap;font-size:.82rem;color:var(--texto-claro);margin-top:1.1rem;align-items:center}
+.lm-sq{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;margin-right:.4rem}
 .pay-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:1.5rem}
 @media(max-width:600px){.pay-grid{grid-template-columns:1fr}}
 .pay-card{padding:1.6rem;background:#fff;border:1px solid rgba(8,82,175,.12);border-radius:14px}
@@ -256,20 +265,22 @@ document.addEventListener('DOMContentLoaded',function(){
       <a href="https://wa.me/526646120031?text=Hola%2C%20me%20interesa%20el%20Lote%201%20de%20la%20Manzana%2007%20(400%20m2%2C%20esquina)%20en%20Ampliaci%C3%B3n%20Islas%20Agrarias" class="lot-wa" target="_blank" rel="noopener">&#128242; Apartar este lote</a>
     </div>
   </div>
-  <h3 style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--oscuro);margin-top:3rem;margin-bottom:.4rem">Disponibilidad completa por manzana</h3>
-  <p style="font-size:.9rem;color:var(--texto-claro);margin-bottom:.5rem">23 lotes disponibles en total. Los marcados en verde tienen precio confirmado (arriba). Los demás mantienen el mismo precio base de $2,000/m&#178;; pregunta medidas y precio exacto por WhatsApp.</p>
-  <div class="mz-avail">
-    <div class="mz-row"><span class="mz-name">Manzana 1</span><div class="mz-pills"><span class="pill">Lote 7</span><span class="pill">Lote 13</span></div></div>
-    <div class="mz-row"><span class="mz-name">Manzana 2</span><div class="mz-pills"><span class="pill p">Lote 2 · $400,000</span></div></div>
-    <div class="mz-row"><span class="mz-name">Manzana 3</span><div class="mz-pills"><span class="pill">Lote 3</span><span class="pill p">Lote 16 · $800,000</span></div></div>
-    <div class="mz-row"><span class="mz-name">Manzana 4</span><div class="mz-pills"><span class="pill">Lote 8</span><span class="pill">Lote 9</span><span class="pill">Lote 11</span><span class="pill">Lote 12</span><span class="pill">Lote 14</span></div></div>
-    <div class="mz-row"><span class="mz-name">Manzana 5</span><div class="mz-pills"><span class="pill">Lote 7</span><span class="pill">Lote 10</span><span class="pill">Lote 15</span></div></div>
-    <div class="mz-row"><span class="mz-name">Manzana 6</span><div class="mz-pills"><span class="pill">Lote 1</span><span class="pill p">Lote 5 · $400,000</span><span class="pill">Lote 10</span><span class="pill">Lote 13</span></div></div>
-    <div class="mz-row"><span class="mz-name">Manzana 7</span><div class="mz-pills"><span class="pill p">Lote 1 · $800,000</span><span class="pill">Lote 10</span><span class="pill">Lote 11</span><span class="pill">Lote 12</span><span class="pill">Lote 13</span><span class="pill">Lote 19</span></div></div>
+  <h3 style="font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--oscuro);margin-top:3rem;margin-bottom:.4rem">Mapa de disponibilidad por manzana</h3>
+  <p style="font-size:.9rem;color:var(--texto-claro);margin-bottom:.5rem">23 lotes disponibles en total (en verde). Los que tienen borde dorado ya tienen precio confirmado (arriba); los demás mantienen el precio base de $2,000/m&#178;. Esquema ilustrativo por manzana; el plano oficial se comparte por WhatsApp.</p>
+  <div class="lotmap">
+    <div class="lm-row"><span class="lm-name">Manzana 1</span><div class="lm-cells"><div class="cell">1</div><div class="cell">2</div><div class="cell">3</div><div class="cell">4</div><div class="cell">5</div><div class="cell">6</div><div class="cell d" title="Disponible">7</div><div class="cell">8</div><div class="cell">9</div><div class="cell">10</div><div class="cell">11</div><div class="cell">12</div><div class="cell d" title="Disponible">13</div></div></div>
+    <div class="lm-row"><span class="lm-name">Manzana 2</span><div class="lm-cells"><div class="cell">1</div><div class="cell d pr" title="Disponible · precio confirmado">2</div><div class="cell">3</div><div class="cell">4</div><div class="cell">5</div><div class="cell">6</div><div class="cell">7</div><div class="cell">8</div><div class="cell">9</div><div class="cell">10</div><div class="cell">11</div><div class="cell">12</div><div class="cell">13</div><div class="cell">14</div></div></div>
+    <div class="lm-row"><span class="lm-name">Manzana 3</span><div class="lm-cells"><div class="cell">1</div><div class="cell">2</div><div class="cell d" title="Disponible">3</div><div class="cell">4</div><div class="cell">5</div><div class="cell">6</div><div class="cell">7</div><div class="cell">8</div><div class="cell">9</div><div class="cell">10</div><div class="cell">11</div><div class="cell">12</div><div class="cell">13</div><div class="cell">14</div><div class="cell">15</div><div class="cell d pr" title="Disponible · precio confirmado">16</div></div></div>
+    <div class="lm-row"><span class="lm-name">Manzana 4</span><div class="lm-cells"><div class="cell">1</div><div class="cell">2</div><div class="cell">3</div><div class="cell">4</div><div class="cell">5</div><div class="cell">6</div><div class="cell">7</div><div class="cell d" title="Disponible">8</div><div class="cell d" title="Disponible">9</div><div class="cell">10</div><div class="cell d" title="Disponible">11</div><div class="cell d" title="Disponible">12</div><div class="cell">13</div><div class="cell d" title="Disponible">14</div><div class="cell">15</div><div class="cell">16</div><div class="cell">17</div><div class="cell">18</div></div></div>
+    <div class="lm-row"><span class="lm-name">Manzana 5</span><div class="lm-cells"><div class="cell">1</div><div class="cell">2</div><div class="cell">3</div><div class="cell">4</div><div class="cell">5</div><div class="cell">6</div><div class="cell d" title="Disponible">7</div><div class="cell">8</div><div class="cell">9</div><div class="cell d" title="Disponible">10</div><div class="cell">11</div><div class="cell">12</div><div class="cell">13</div><div class="cell">14</div><div class="cell d" title="Disponible">15</div><div class="cell">16</div><div class="cell">17</div><div class="cell">18</div><div class="cell">19</div><div class="cell">20</div><div class="cell">21</div><div class="cell">22</div><div class="cell">23</div></div></div>
+    <div class="lm-row"><span class="lm-name">Manzana 6</span><div class="lm-cells"><div class="cell d" title="Disponible">1</div><div class="cell">2</div><div class="cell">3</div><div class="cell">4</div><div class="cell d pr" title="Disponible · precio confirmado">5</div><div class="cell">6</div><div class="cell">7</div><div class="cell">8</div><div class="cell">9</div><div class="cell d" title="Disponible">10</div><div class="cell">11</div><div class="cell">12</div><div class="cell d" title="Disponible">13</div><div class="cell">14</div><div class="cell">15</div><div class="cell">16</div><div class="cell">17</div><div class="cell">18</div><div class="cell">19</div><div class="cell">20</div><div class="cell">21</div><div class="cell">22</div><div class="cell">23</div><div class="cell">24</div><div class="cell">25</div><div class="cell">26</div><div class="cell">27</div></div></div>
+    <div class="lm-row"><span class="lm-name">Manzana 7</span><div class="lm-cells"><div class="cell d pr" title="Disponible · precio confirmado">1</div><div class="cell">2</div><div class="cell">3</div><div class="cell">4</div><div class="cell">5</div><div class="cell">6</div><div class="cell">7</div><div class="cell">8</div><div class="cell">9</div><div class="cell d" title="Disponible">10</div><div class="cell d" title="Disponible">11</div><div class="cell d" title="Disponible">12</div><div class="cell d" title="Disponible">13</div><div class="cell">14</div><div class="cell">15</div><div class="cell">16</div><div class="cell">17</div><div class="cell">18</div><div class="cell d" title="Disponible">19</div><div class="cell">20</div><div class="cell">21</div></div></div>
+    <div class="lm-row"><span class="lm-name">Manzana 8</span><div class="lm-cells"><div class="cell">1</div><div class="cell">2</div><div class="cell">3</div><div class="cell">4</div><div class="cell">5</div><div class="cell">6</div><div class="cell">7</div><div class="cell">8</div><div class="cell">9</div><div class="cell">10</div><div class="cell">11</div><div class="cell">12</div></div></div>
   </div>
-  <div class="mz-legend">
-    <span><span class="mz-dot" style="background:rgba(17,115,114,.4)"></span>Precio confirmado</span>
-    <span><span class="mz-dot" style="background:#e6ebf4"></span>Disponible · cotiza por WhatsApp</span>
+  <div class="lm-legend">
+    <span><span class="lm-sq" style="background:var(--verde)"></span>Disponible</span>
+    <span><span class="lm-sq" style="background:var(--verde);box-shadow:inset 0 0 0 2px #f5c542"></span>Precio confirmado</span>
+    <span><span class="lm-sq" style="background:#e7eaf0"></span>Vendido / apartado</span>
   </div>
   <div style="text-align:center;margin-top:1.8rem">
     <a href="https://wa.me/526646120031?text=Hola%2C%20quiero%20la%20lista%20de%20lotes%20disponibles%20y%20precios%20de%20Ampliaci%C3%B3n%20Islas%20Agrarias" class="btn-wa" target="_blank" rel="noopener">&#128242; Pedir lista completa y precios</a>
