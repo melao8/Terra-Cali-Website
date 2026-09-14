@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Fraccionamiento San Patricio — Terrenos Habitacionales | Terra Cali</title>
+<title>Ampliación Islas Agrarias — Terrenos Habitacionales en Mexicali | Terra Cali</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
 <style>:root{--azul:#0852AF;--verde:#117372;--gris:#F4F7FC;--oscuro:#053880;--texto:#1a1a2e;--texto-claro:#5a6a8a}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}body{font-family:'Lato',sans-serif;color:var(--texto);background:#fff;line-height:1.6}a{color:inherit;text-decoration:none}img{max-width:100%;height:auto}
@@ -138,10 +138,32 @@ document.addEventListener('DOMContentLoaded',function(){
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1013558301060333&ev=PageView&noscript=1"/></noscript>
 <!-- End Meta Pixel -->
 </head>
+<style>
+.lots-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.3rem;margin-top:2rem}
+.lot-card{background:#fff;border:1px solid rgba(8,82,175,.12);border-radius:16px;padding:1.6rem;box-shadow:0 4px 20px rgba(8,82,175,.06);display:flex;flex-direction:column}
+.lot-card.esq{border-top:4px solid var(--verde)}
+.lot-badge{align-self:flex-start;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.28rem .7rem;border-radius:100px;background:rgba(8,82,175,.1);color:var(--azul);margin-bottom:.9rem}
+.lot-badge.esq{background:rgba(17,115,114,.12);color:var(--verde)}
+.lot-mz{font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--texto-claro);margin-bottom:.2rem}
+.lot-size{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:700;color:var(--oscuro);line-height:1.1}
+.lot-size small{font-size:.72rem;color:var(--texto-claro);font-weight:400;display:block;margin-top:.15rem;font-family:'Lato',sans-serif}
+.lot-loc{font-size:.85rem;color:var(--texto-claro);line-height:1.5;margin:.9rem 0}
+.lot-price{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--azul);margin-top:auto}
+.lot-price span{font-size:.72rem;color:var(--texto-claro);font-weight:400;text-transform:uppercase;letter-spacing:.05em;display:block;font-family:'Lato',sans-serif}
+.lot-wa{margin-top:1rem;display:inline-flex;align-items:center;justify-content:center;gap:.4rem;background:#25D366;color:#fff;padding:.7rem 1rem;border-radius:8px;font-weight:700;font-size:.85rem;transition:.2s}
+.lot-wa:hover{background:#1da854}
+.plano-box{margin-top:2rem;border-radius:16px;overflow:hidden;border:1px solid rgba(8,82,175,.12);background:var(--gris)}
+.plano-box img{display:block;width:100%;height:auto}
+.pay-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:1.5rem}
+@media(max-width:600px){.pay-grid{grid-template-columns:1fr}}
+.pay-card{padding:1.6rem;background:#fff;border:1px solid rgba(8,82,175,.12);border-radius:14px}
+.pay-card h4{font-size:1rem;font-weight:700;margin-bottom:.4rem;color:var(--azul)}
+.pay-card p{font-size:.88rem;color:var(--texto-claro);line-height:1.6}
+</style>
 <body>
 <nav><div class="nav-inner">
   <a href="index.html" class="nav-logo"><img src="assets/img/f149514250.jpg" alt="Terra Cali"/></a>
-  <ul class="nav-links"><li><a href="index.html">Inicio</a></li><li><a href="residencial.html" class="active">Residencial</a></li><li><a href="islas-agrarias.html">Islas Agrarias</a></li><li><a href="comercial.html">Comercial</a></li><li><a href="casas.html">Casas</a></li><li><a href="nosotros.html">Nosotros</a></li><li><a href="contacto.html">Contacto</a></li><li><a href="blog.html">Blog</a></li></ul>
+  <ul class="nav-links"><li><a href="index.html">Inicio</a></li><li><a href="residencial.html">Residencial</a></li><li><a href="islas-agrarias.html" class="active">Islas Agrarias</a></li><li><a href="comercial.html">Comercial</a></li><li><a href="casas.html">Casas</a></li><li><a href="nosotros.html">Nosotros</a></li><li><a href="contacto.html">Contacto</a></li><li><a href="blog.html">Blog</a></li></ul>
   <a href="https://wa.me/526864338446" class="nav-cta" target="_blank" rel="noopener">Hablar con un Asesor</a>
   <button class="nav-hamburger" onclick="document.getElementById('mob').classList.toggle('open')" aria-label="Abrir menu"><span></span><span></span><span></span></button>
 </div></nav>
@@ -149,59 +171,39 @@ document.addEventListener('DOMContentLoaded',function(){
 
 <div class="page-hero">
   <div class="eyebrow">Terrenos Habitacionales &middot; Mexicali, B.C.</div>
-  <h1>Fraccionamiento<br><em>San Patricio</em></h1>
-  <p>Lotes habitacionales en Mexicali con financiamiento propio, sin banco. Empieza a construir tu patrimonio desde el primer pago.</p>
+  <h1>Ampliación<br><em>Islas Agrarias</em></h1>
+  <p>Lotes habitacionales en un fraccionamiento autorizado y regularizado, con lotificación oficial y servicios de luz, agua y drenaje en la zona. Listos para escriturar.</p>
   <div class="hero-stats">
-    <div class="hero-stat"><strong>160 m&#178;</strong><span>Tamaño estándar</span></div>
-    <div class="hero-stat"><strong>Sin banco</strong><span>Financiamiento propio</span></div>
-    <div class="hero-stat"><strong>30+ años</strong><span>Experiencia del equipo</span></div>
+    <div class="hero-stat"><strong>144</strong><span>Lotes en 9 manzanas</span></div>
+    <div class="hero-stat"><strong>5</strong><span>Lotes disponibles</span></div>
+    <div class="hero-stat"><strong>Desde $400,000</strong><span>Precio de contado</span></div>
   </div>
 </div>
-
-<section style="padding:0 5% 60px">
-<div class="inner">
-  <div class="section-label">Familias Terra Cali</div>
-  <h2 class="section-title">Historias reales en terrenos reales</h2>
-  <p class="section-sub">Familias como la tuya que ya dieron el primer paso. Tu historia puede comenzar aquí.</p>
-  <div style="display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:1rem;border-radius:16px;overflow:hidden;margin-top:1.5rem">
-    <div style="grid-row:span 2;overflow:hidden;border-radius:12px 0 0 12px">
-      <img src="assets/img/26bfd2b5f4.jpg" alt="Familia en terreno San Patricio Mexicali" style="width:100%;height:100%;object-fit:cover;display:block"/>
-    </div>
-    <div style="overflow:hidden;border-radius:0 12px 0 0">
-      <img src="assets/img/30ea274d5b.jpg" alt="Familia feliz en lote Terra Cali Mexicali" style="width:100%;height:100%;object-fit:cover;display:block"/>
-    </div>
-    <div style="overflow:hidden;border-radius:0 0 12px 0">
-      <img src="assets/img/87915c2e70.jpg" alt="Familia en terreno Fracc San Patricio" style="width:100%;height:100%;object-fit:cover;display:block"/>
-    </div>
-  </div>
-</div>
-</section>
-
 
 <section style="padding:80px 5%">
 <div class="inner">
   <div class="two-col">
     <div>
-      <div class="section-label">Nuestro desarrollo habitacional</div>
-      <h2 class="section-title">Tu lote en San Patricio</h2>
-      <p class="body-text">El Fraccionamiento San Patricio está ubicado en el poniente de Mexicali, cerca de Colonia Santa Isabel y la Frutería Welton — una zona de comunidad trabajadora donde cientos de familias mexicalenses han empezado a construir su patrimonio con Terra Cali.</p>
-      <p class="body-text">Una zona en pleno desarrollo con acceso directo a los principales corredores industriales del poniente de Mexicali, incluyendo el nuevo Centro de Distribución Walmart, que generó más de 700 empleos directos en la región. Cercanía a servicios, transporte y todo lo que una familia activa necesita.</p>
+      <div class="section-label">El fraccionamiento</div>
+      <h2 class="section-title">Ampliación Islas Agrarias</h2>
+      <p class="body-text">Fraccionamiento habitacional en el oriente de Mexicali, con lotificación autorizada por la Comisión para la Regularización de la Tenencia de la Tierra del Estado, Gobierno de Baja California. Clasificado como área de asentamientos humanos en zona urbana, uso habitacional.</p>
+      <p class="body-text">Son 144 lotes distribuidos en 9 manzanas, con vialidades ya trazadas: avenidas Canalero, Empacadores, Parcelero, Trilladores y Zapadores, y calles Agraristas, Idealistas y 27 de Enero. Acceso por la Carretera a Islas Agrarias y Calle 27 de Enero.</p>
       <div class="attr-grid">
-        <div class="attr-item"><strong>$2,500/m&#178;</strong><span>Precio de venta</span></div>
-        <div class="attr-item"><strong>160 m&#178;</strong><span>Lote estándar</span></div>
-        <div class="attr-item"><strong>Sin banco</strong><span>Financiamiento directo</span></div>
-        <div class="attr-item"><strong>100% legal</strong><span>Escrituración garantizada</span></div>
+        <div class="attr-item"><strong>144 lotes</strong><span>En 9 manzanas</span></div>
+        <div class="attr-item"><strong>52,880 m&#178;</strong><span>Superficie total</span></div>
+        <div class="attr-item"><strong>Zona urbana</strong><span>Uso habitacional</span></div>
+        <div class="attr-item"><strong>100% legal</strong><span>Listo para escriturar</span></div>
       </div>
       <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem">
-        <a href="https://wa.me/526864338446?text=Hola%2C%20quiero%20informes%20del%20Fracc.%20San%20Patricio" class="btn-wa" target="_blank" rel="noopener">&#128242; Preguntar por WhatsApp</a>
+        <a href="https://wa.me/526864338446?text=Hola%2C%20quiero%20informes%20de%20Ampliaci%C3%B3n%20Islas%20Agrarias" class="btn-wa" target="_blank" rel="noopener">&#128242; Preguntar por WhatsApp</a>
         <a href="contacto.html" style="padding:.85rem 1.8rem;border-radius:40px;font-weight:700;font-size:.93rem;background:var(--gris);color:var(--azul);border:1.5px solid var(--azul);transition:.2s">Solicitar informes</a>
       </div>
     </div>
     <div>
-      <div style="background:var(--gris);border-radius:16px;overflow:hidden;height:320px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2000!2d-115.58725!3d32.64000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2smx!4v1" width="100%" height="320" style="border:0;border-radius:16px" allowfullscreen="" loading="lazy" title="Fraccionamiento San Patricio, Mexicali"></iframe>
+      <div style="background:var(--gris);border-radius:16px;overflow:hidden;height:320px;margin-bottom:1rem">
+        <iframe src="https://www.google.com/maps?q=Islas%20Agrarias%20Mexicali&output=embed" width="100%" height="320" style="border:0;border-radius:16px" allowfullscreen="" loading="lazy" title="Ampliación Islas Agrarias, Mexicali"></iframe>
       </div>
-      <p style="font-size:.82rem;color:var(--texto-claro);text-align:center">Zona poniente de Mexicali, cerca de Colonia Santa Isabel y Frutería Welton</p>
+      <p style="font-size:.82rem;color:var(--texto-claro);text-align:center">Oriente de Mexicali, sobre la Carretera a Islas Agrarias</p>
     </div>
   </div>
 </div>
@@ -209,87 +211,95 @@ document.addEventListener('DOMContentLoaded',function(){
 
 <section style="background:var(--gris);padding:80px 5%">
 <div class="inner">
-  <div class="section-label">La zona</div>
-  <h2 class="section-title">¿Por qué San Patricio?</h2>
-  <p class="section-sub">Una zona en desarrollo con acceso a empleo y servicios. Perfecta para quien quiere construir casa cerca de donde trabaja.</p>
-  <div class="features-grid">
-    <div class="feature">
-      <h4>Cerca de Colonia Santa Isabel y Frutería Welton</h4>
-      <p>Zona establecida con comercio local, transporte y servicios básicos a tu alcance.</p>
+  <div class="section-label">Inventario</div>
+  <h2 class="section-title">Lotes disponibles</h2>
+  <p class="section-sub">Estos son los lotes disponibles dentro del fraccionamiento. El resto está vendido. Precios en pesos mexicanos, de contado.</p>
+  <div class="lots-grid">
+    <div class="lot-card">
+      <span class="lot-badge">Disponible</span>
+      <div class="lot-mz">Manzana 02 · Lote 2</div>
+      <div class="lot-size">200 m&#178;<small>200.19 m&#178; &middot; 10.01 &times; 20.02 m</small></div>
+      <div class="lot-loc">Frente a Avenida Empacadores</div>
+      <div class="lot-price">$400,000<span>Precio de contado (MXN)</span></div>
+      <a href="https://wa.me/526864338446?text=Hola%2C%20me%20interesa%20el%20Lote%202%20de%20la%20Manzana%2002%20(200%20m2)%20en%20Ampliaci%C3%B3n%20Islas%20Agrarias" class="lot-wa" target="_blank" rel="noopener">&#128242; Apartar este lote</a>
     </div>
-    <div class="feature">
-      <h4>Corredor Industrial del Oriente</h4>
-      <p>Múltiples parques industriales en la zona generan miles de empleos. Vive cerca de tu trabajo.</p>
+    <div class="lot-card esq">
+      <span class="lot-badge esq">Disponible &middot; Esquina</span>
+      <div class="lot-mz">Manzana 03 · Lote 16</div>
+      <div class="lot-size">395 m&#178;<small>395.31 m&#178; &middot; 20.04 &times; 19.70 m</small></div>
+      <div class="lot-loc">Esquina de Av. Trilladores y Calle Idealistas</div>
+      <div class="lot-price">$800,000<span>Precio de contado (MXN)</span></div>
+      <a href="https://wa.me/526864338446?text=Hola%2C%20me%20interesa%20el%20Lote%2016%20de%20la%20Manzana%2003%20(395%20m2%2C%20esquina)%20en%20Ampliaci%C3%B3n%20Islas%20Agrarias" class="lot-wa" target="_blank" rel="noopener">&#128242; Apartar este lote</a>
     </div>
-    <div class="feature">
-      <h4>Centro de Distribución Walmart</h4>
-      <p>Walmart inauguró su CEDIS #21 en Mexicali — 130,000 m&#178; y más de 700 empleos directos en la región noreste.</p>
+    <div class="lot-card">
+      <span class="lot-badge">Disponible</span>
+      <div class="lot-mz">Manzana 06 · Lote 5</div>
+      <div class="lot-size">200 m&#178;<small>200.19 m&#178; &middot; 10.01 &times; 20.02 m</small></div>
+      <div class="lot-loc">Frente a Avenida Empacadores</div>
+      <div class="lot-price">$400,000<span>Precio de contado (MXN)</span></div>
+      <a href="https://wa.me/526864338446?text=Hola%2C%20me%20interesa%20el%20Lote%205%20de%20la%20Manzana%2006%20(200%20m2)%20en%20Ampliaci%C3%B3n%20Islas%20Agrarias" class="lot-wa" target="_blank" rel="noopener">&#128242; Apartar este lote</a>
     </div>
-    <div class="feature">
-      <h4>Precios accesibles con potencial</h4>
-      <p>Al ser una zona en desarrollo, los precios son justos. La infraestructura crece junto con las familias que la habitan.</p>
+    <div class="lot-card esq">
+      <span class="lot-badge esq">Disponible &middot; Esquina</span>
+      <div class="lot-mz">Manzana 06 · Lote 23</div>
+      <div class="lot-size">230 m&#178;<small>229.76 m&#178; &middot; lote en esquina</small></div>
+      <div class="lot-loc">Esquina de Av. Parcelero y Calle 27 de Enero</div>
+      <div class="lot-price">$500,000<span>Precio de contado (MXN)</span></div>
+      <a href="https://wa.me/526864338446?text=Hola%2C%20me%20interesa%20el%20Lote%2023%20de%20la%20Manzana%2006%20(230%20m2%2C%20esquina)%20en%20Ampliaci%C3%B3n%20Islas%20Agrarias" class="lot-wa" target="_blank" rel="noopener">&#128242; Apartar este lote</a>
     </div>
-    <div class="feature">
-      <h4>Financiamiento propio sin banco</h4>
-      <p>Sin historial crediticio requerido. Sin intermediarios. Trato directo con Terra Cali desde el primer día.</p>
-    </div>
-    <div class="feature">
-      <h4>Lotificación flexible</h4>
-      <p>Lotes estándar de 160 m² o combina dos para tener 320 m². Esquinas disponibles para quienes quieren más espacio.</p>
+    <div class="lot-card esq">
+      <span class="lot-badge esq">Disponible &middot; Esquina</span>
+      <div class="lot-mz">Manzana 07 · Lote 1</div>
+      <div class="lot-size">400 m&#178;<small>399.96 m&#178; &middot; 20.00 &times; 20.03 m</small></div>
+      <div class="lot-loc">Esquina de Av. Parcelero y Calle Idealistas</div>
+      <div class="lot-price">$800,000<span>Precio de contado (MXN)</span></div>
+      <a href="https://wa.me/526864338446?text=Hola%2C%20me%20interesa%20el%20Lote%201%20de%20la%20Manzana%2007%20(400%20m2%2C%20esquina)%20en%20Ampliaci%C3%B3n%20Islas%20Agrarias" class="lot-wa" target="_blank" rel="noopener">&#128242; Apartar este lote</a>
     </div>
   </div>
+  <div class="plano-box">
+    <img src="assets/img/ia-plano-disponibles.jpg" alt="Plano de Ampliación Islas Agrarias con los lotes disponibles resaltados" loading="lazy"/>
+  </div>
+  <p style="font-size:.82rem;color:var(--texto-claro);text-align:center;margin-top:1rem">Los lotes resaltados en el plano están disponibles. El resto del fraccionamiento se encuentra vendido.</p>
 </div>
 </section>
 
 <section style="padding:80px 5%">
 <div class="inner">
-  <div class="section-label">Calcula tu mensualidad</div>
-  <h2 class="section-title">Estimador de pagos</h2>
-  <p class="section-sub">Todos los lotes se venden a $2,500 por m&#178;. Ajusta el tamaño, el enganche y los plazos para ver tu mensualidad estimada.</p>
-  <div style="background:var(--gris);border-radius:20px;padding:2.5rem;margin-top:1rem">
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.2rem;margin-bottom:1.5rem">
-      <div>
-        <label style="display:block;font-size:.82rem;font-weight:700;margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.05em">Tamaño del lote</label>
-        <select id="calc-size" onchange="calcular()" style="width:100%;padding:.75rem 1rem;border:1.5px solid #dde4f0;border-radius:8px;font-family:'Lato',sans-serif;font-size:.95rem;background:#fff">
-          <option value="160">160 m&#178; (estándar)</option>
-          <option value="200">200 m&#178; (esquina)</option>
-          <option value="240">240 m&#178;</option>
-          <option value="320">320 m&#178; (doble lote)</option>
-        </select>
-      </div>
-      <div>
-        <label style="display:block;font-size:.82rem;font-weight:700;margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.05em">Enganche (%)</label>
-        <select id="calc-eng" onchange="calcular()" style="width:100%;padding:.75rem 1rem;border:1.5px solid #dde4f0;border-radius:8px;font-family:'Lato',sans-serif;font-size:.95rem;background:#fff">
-          <option value="0" selected>Sin enganche</option>
-          <option value="10">10%</option>
-          <option value="20">20%</option>
-          <option value="30">30%</option>
-          <option value="40">40%</option>
-          <option value="50">50%</option>
-        </select>
-      </div>
-      <div>
-        <label style="display:block;font-size:.82rem;font-weight:700;margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.05em">Plazo de pagos</label>
-        <select id="calc-meses" onchange="calcular()" style="width:100%;padding:.75rem 1rem;border:1.5px solid #dde4f0;border-radius:8px;font-family:'Lato',sans-serif;font-size:.95rem;background:#fff">
-          <option value="12">12 meses</option>
-          <option value="24" selected>24 meses</option>
-          <option value="36">36 meses</option>
-          <option value="48">48 meses</option>
-          <option value="60">60 meses</option>
-          <option value="72">72 meses</option>
-          <option value="84">84 meses</option>
-          <option value="96">96 meses</option>
-          <option value="120">120 meses</option>
-          <option value="144" selected>144 meses</option>
-        </select>
-      </div>
-    </div>
-    <div id="calc-result" style="background:var(--azul);color:#fff;border-radius:12px;padding:1.5rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;text-align:center">
-      <div><strong id="r-total" style="display:block;font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700">$400,000</strong><span style="font-size:.75rem;opacity:.8;text-transform:uppercase;letter-spacing:.06em">Precio total</span></div>
-      <div><strong id="r-eng" style="display:block;font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700">$0</strong><span style="font-size:.75rem;opacity:.8;text-transform:uppercase;letter-spacing:.06em">Enganche</span></div>
-      <div><strong id="r-men" style="display:block;font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700">$2,778</strong><span style="font-size:.75rem;opacity:.8;text-transform:uppercase;letter-spacing:.06em">Mensualidad estimada</span></div>
-    </div>
-    <p style="font-size:.78rem;color:var(--texto-claro);text-align:center;margin-top:1rem;font-style:italic">* Estimación orientativa. El monto exacto se define en contrato. Contáctanos para un plan de pagos personalizado.</p>
+  <div class="section-label">Cómo se fijan los precios</div>
+  <h2 class="section-title">El precio por metro</h2>
+  <p class="section-sub">El precio parte de una base de $2,000 por m&#178;. Los lotes en esquina tienen un plus por su ubicación privilegiada, y las cifras se cierran a montos redondos.</p>
+  <div class="attr-grid" style="grid-template-columns:repeat(3,1fr)">
+    <div class="attr-item"><strong>200 m&#178;</strong><span>$400,000 &middot; interior</span></div>
+    <div class="attr-item"><strong>230 m&#178;</strong><span>$500,000 &middot; esquina</span></div>
+    <div class="attr-item"><strong>400 m&#178;</strong><span>$800,000 &middot; esquina</span></div>
+  </div>
+  <p class="body-text" style="margin-top:1.2rem">Base de $2,000/m&#178; para lotes interiores. El lote de 230 m&#178; en esquina (Mz 06 · Lote 23) lleva un plus por ubicación que lo cierra en $500,000. El precio exacto de cada lote se confirma por escrito en el contrato de compraventa.</p>
+</div>
+</section>
+
+<section style="background:var(--gris);padding:80px 5%">
+<div class="inner">
+  <div class="section-label">Formas de pago</div>
+  <h2 class="section-title">Cómo se compra</h2>
+  <p class="section-sub">En este fraccionamiento no se maneja financiamiento directo del vendedor.</p>
+  <div class="pay-grid">
+    <div class="pay-card"><h4>Contado</h4><p>Pago único contra firma del contrato de compraventa.</p></div>
+    <div class="pay-card"><h4>Crédito Infonavit</h4><p>Sujeto a tu precalificación vigente y a la validación del expediente del lote.</p></div>
+  </div>
+  <p class="body-text" style="margin-top:1.5rem"><strong>Política de pagos.</strong> Únicamente por transferencia SPEI, depósito bancario o referencia en tienda, siempre a la cuenta empresarial a nombre de Desarrolladora JC de Baja California, S.A. de C.V. No se reciben pagos en efectivo ni depósitos a cuentas personales. Cada pago genera comprobante.</p>
+</div>
+</section>
+
+<section style="padding:80px 5%">
+<div class="inner">
+  <div class="section-label">Infraestructura y servicios</div>
+  <h2 class="section-title">Servicios en el fraccionamiento</h2>
+  <p class="section-sub">El fraccionamiento cuenta con redes de servicios públicos en la zona. Las tomas no están instaladas dentro del lote: cada servicio lo contrata directamente el comprador ante la dependencia correspondiente.</p>
+  <div class="features-grid">
+    <div class="feature"><h4>Energía eléctrica &middot; CFE</h4><p>Red de energía eléctrica en el fraccionamiento. La contratación de la toma se realiza ante CFE.</p></div>
+    <div class="feature"><h4>Agua potable y drenaje &middot; CESPM</h4><p>Redes de agua potable y drenaje en la zona. Las tomas se contratan ante CESPM.</p></div>
+    <div class="feature"><h4>Vialidades trazadas</h4><p>Avenidas y calles ya trazadas conforme al plano oficial de lotificación.</p></div>
+    <div class="feature"><h4>Zona urbana consolidada</h4><p>Área de asentamientos humanos con uso habitacional y crecimiento en el oriente de Mexicali.</p></div>
   </div>
 </div>
 </section>
@@ -297,68 +307,37 @@ document.addEventListener('DOMContentLoaded',function(){
 <section style="background:var(--gris);padding:80px 5%">
 <div class="inner">
   <div class="section-label">El proceso de compra</div>
-  <h2 class="section-title">Del primer contacto a tu lote</h2>
-  <p class="section-sub">Un proceso simple, transparente y acompañado en cada paso.</p>
+  <h2 class="section-title">Del primer contacto a tu escritura</h2>
+  <p class="section-sub">Un proceso claro y con documentación por escrito en cada paso.</p>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.5rem;margin-top:2rem">
-    <div style="text-align:center;padding:1.5rem 1rem">
-      <div style="width:56px;height:56px;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:900;margin:0 auto 1rem">1</div>
-      <h4 style="margin-bottom:.4rem;font-size:.95rem">Contáctanos</h4>
-      <p style="font-size:.82rem;color:var(--texto-claro)">WhatsApp, teléfono o formulario. Te respondemos el mismo día.</p>
-    </div>
-    <div style="text-align:center;padding:1.5rem 1rem">
-      <div style="width:56px;height:56px;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:900;margin:0 auto 1rem">2</div>
-      <h4 style="margin-bottom:.4rem;font-size:.95rem">Visita el lote</h4>
-      <p style="font-size:.82rem;color:var(--texto-claro)">Te acompañamos a conocer tu futuro terreno. Sin presiones.</p>
-    </div>
-    <div style="text-align:center;padding:1.5rem 1rem">
-      <div style="width:56px;height:56px;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:900;margin:0 auto 1rem">3</div>
-      <h4 style="margin-bottom:.4rem;font-size:.95rem">Apartado</h4>
-      <p style="font-size:.82rem;color:var(--texto-claro)">Con enganche accesible el lote es tuyo. Definimos tu plan de pagos.</p>
-    </div>
-    <div style="text-align:center;padding:1.5rem 1rem">
-      <div style="width:56px;height:56px;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:900;margin:0 auto 1rem">4</div>
-      <h4 style="margin-bottom:.4rem;font-size:.95rem">Contratación</h4>
-      <p style="font-size:.82rem;color:var(--texto-claro)">Firmamos contrato y arrancas tus pagos mensuales.</p>
-    </div>
-    <div style="text-align:center;padding:1.5rem 1rem">
-      <div style="width:56px;height:56px;border-radius:50%;background:var(--verde);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:900;margin:0 auto 1rem">5</div>
-      <h4 style="margin-bottom:.4rem;font-size:.95rem">Entrega del lote</h4>
-      <p style="font-size:.82rem;color:var(--texto-claro)">Después de 6 mensualidades, te entregamos tu lote para que puedas empezar a construir.</p>
-    </div>
-    <div style="text-align:center;padding:1.5rem 1rem">
-      <div style="width:56px;height:56px;border-radius:50%;background:var(--verde);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:900;margin:0 auto 1rem">6</div>
-      <h4 style="margin-bottom:.4rem;font-size:.95rem">Escrituración</h4>
-      <p style="font-size:.82rem;color:var(--texto-claro)">Al liquidar completamente, escrituramos a tu nombre. El terreno es 100% tuyo.</p>
-    </div>
+    <div style="text-align:center;padding:1.5rem 1rem"><div style="width:56px;height:56px;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:900;margin:0 auto 1rem">1</div><h4 style="margin-bottom:.4rem;font-size:.95rem">Visita al lote</h4><p style="font-size:.82rem;color:var(--texto-claro)">Verificamos ubicación y medidas señaladas físicamente en sitio.</p></div>
+    <div style="text-align:center;padding:1.5rem 1rem"><div style="width:56px;height:56px;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:900;margin:0 auto 1rem">2</div><h4 style="margin-bottom:.4rem;font-size:.95rem">Revisión de documentos</h4><p style="font-size:.82rem;color:var(--texto-claro)">Revisas la documentación del predio antes de entregar cualquier cantidad.</p></div>
+    <div style="text-align:center;padding:1.5rem 1rem"><div style="width:56px;height:56px;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:900;margin:0 auto 1rem">3</div><h4 style="margin-bottom:.4rem;font-size:.95rem">Apartado formal</h4><p style="font-size:.82rem;color:var(--texto-claro)">Apartas el lote con comprobante a nombre de la empresa.</p></div>
+    <div style="text-align:center;padding:1.5rem 1rem"><div style="width:56px;height:56px;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:900;margin:0 auto 1rem">4</div><h4 style="margin-bottom:.4rem;font-size:.95rem">Firma de contrato</h4><p style="font-size:.82rem;color:var(--texto-claro)">Manzana, lote, medidas, colindancias, precio, forma de pago y fechas.</p></div>
+    <div style="text-align:center;padding:1.5rem 1rem"><div style="width:56px;height:56px;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:900;margin:0 auto 1rem">5</div><h4 style="margin-bottom:.4rem;font-size:.95rem">Pago del saldo</h4><p style="font-size:.82rem;color:var(--texto-claro)">Pago del saldo, o dispersión del crédito en el caso de Infonavit.</p></div>
+    <div style="text-align:center;padding:1.5rem 1rem"><div style="width:56px;height:56px;border-radius:50%;background:var(--verde);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.3rem;font-weight:900;margin:0 auto 1rem">6</div><h4 style="margin-bottom:.4rem;font-size:.95rem">Escrituración</h4><p style="font-size:.82rem;color:var(--texto-claro)">Escrituración ante notario público y entrega de posesión.</p></div>
   </div>
 </div>
 </section>
 
+<section style="padding:80px 5%">
+<div class="inner">
+  <div class="section-label">Plano oficial</div>
+  <h2 class="section-title">Lotificación autorizada</h2>
+  <p class="section-sub">Plano de polígono, ejes, manzanas y lotificación del fraccionamiento.</p>
+  <div class="plano-box"><img src="assets/img/ia-plano-oficial.jpg" alt="Plano oficial de lotificación de Ampliación Islas Agrarias" loading="lazy"/></div>
+</div>
+</section>
+
 <section class="cta-section">
-  <div class="eyebrow" style="font-size:.78rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;opacity:.7;margin-bottom:1rem">Empieza hoy</div>
-  <h2>Tu terreno en San Patricio te espera</h2>
-  <p>Habla con un asesor hoy — te ayudamos a encontrar el lote ideal y el plan de pagos que se ajusta a tu situación.</p>
+  <div class="eyebrow" style="font-size:.78rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;opacity:.7;margin-bottom:1rem">Aparta tu lote</div>
+  <h2>¿Te interesa alguno de estos lotes?</h2>
+  <p>Escríbenos para apartarlo o para agendar la visita al lote. Te compartimos la documentación del predio antes de cualquier pago.</p>
   <div class="cta-btns">
-    <a href="https://wa.me/526864338446?text=Hola%2C%20quiero%20informes%20del%20Fracc.%20San%20Patricio" class="btn-wa" target="_blank" rel="noopener">&#128242; WhatsApp directo</a>
+    <a href="https://wa.me/526864338446?text=Hola%2C%20quiero%20informes%20de%20Ampliaci%C3%B3n%20Islas%20Agrarias" class="btn-wa" target="_blank" rel="noopener">&#128242; WhatsApp directo</a>
     <a href="contacto.html" class="btn-outline">Más opciones de contacto</a>
   </div>
 </section>
-
-<script>
-function fmt(n){return'$'+Math.round(n).toLocaleString('es-MX')}
-function calcular(){
-  var m2=parseInt(document.getElementById('calc-size').value);
-  var pct=parseInt(document.getElementById('calc-eng').value)/100;
-  var meses=parseInt(document.getElementById('calc-meses').value);
-  var total=m2*2500;
-  var eng=total*pct;
-  var mensual=(total-eng)/meses;
-  document.getElementById('r-total').textContent=fmt(total);
-  document.getElementById('r-eng').textContent=fmt(eng);
-  document.getElementById('r-men').textContent=fmt(mensual);
-}
-calcular();
-</script>
 
 <footer>
   <div class="footer-inner">
