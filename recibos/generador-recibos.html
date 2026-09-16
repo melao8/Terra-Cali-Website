@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recibo Terra Cali</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --azul-terra:#0852AF;
+    --verde-cali:#117372;
+    --azul-oscuro:#053880;
+    --gris-claro:#F4F7FC;
+    --texto:#1A1A1A;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:'Lato',Arial,sans-serif;
+    color:var(--texto);
+    background:var(--gris-claro);
+    padding:24px;
+    line-height:1.5;
+  }
+
+  /* Barra de controles (no se imprime) */
+  .controles{
+    max-width:800px;margin:0 auto 20px;
+    background:#fff;border-radius:12px;padding:18px 20px;
+    box-shadow:0 2px 12px rgba(5,56,128,.10);
+    display:flex;flex-wrap:wrap;gap:10px;align-items:center;
+  }
+  .controles p{width:100%;font-size:13px;color:var(--azul-oscuro);margin-bottom:4px;font-weight:600;}
+  .controles small{width:100%;color:#555;font-size:12px;font-weight:400;margin-bottom:6px;}
+  .btn{
+    border:none;border-radius:8px;padding:11px 20px;font-family:'Lato';
+    font-weight:600;font-size:14px;cursor:pointer;color:#fff;
+  }
+  .btn-print{background:var(--azul-terra);}
+  .btn-clear{background:var(--verde-cali);}
+
+  /* Hoja del recibo */
+  .recibo{
+    max-width:800px;margin:0 auto;background:#fff;
+    border-radius:14px;overflow:hidden;
+    box-shadow:0 4px 24px rgba(5,56,128,.12);
+  }
+  .rec-header{
+    background:var(--azul-terra);color:#fff;
+    padding:26px 34px;display:flex;justify-content:space-between;align-items:center;gap:20px;
+  }
+  .marca{display:flex;align-items:center;gap:14px;}
+  /* Ícono del logo reproducido en CSS: techo azul + terreno verde */
+  .logo-icon{
+    width:52px;height:52px;background:#fff;border-radius:10px;
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
+  .logo-icon svg{width:36px;height:36px;}
+  .marca-txt h1{font-family:'Playfair Display';font-size:24px;letter-spacing:2px;line-height:1;}
+  .marca-txt span{font-size:11px;font-style:italic;opacity:.9;}
+  .rec-tipo{text-align:right;}
+  .rec-tipo h2{font-family:'Playfair Display';font-size:20px;font-weight:700;}
+  .rec-tipo .folio{font-size:13px;opacity:.92;margin-top:2px;}
+
+  .rec-body{padding:30px 34px;}
+  .fila-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:22px;}
+  .campo label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--verde-cali);font-weight:700;margin-bottom:2px;}
+  .campo .val{font-size:15px;font-weight:600;color:var(--azul-oscuro);}
+
+  .monto-box{
+    background:var(--gris-claro);border-left:5px solid var(--verde-cali);
+    border-radius:8px;padding:18px 22px;margin-bottom:22px;
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;
+  }
+  .monto-box .lbl{font-size:12px;text-transform:uppercase;letter-spacing:.5px;color:var(--verde-cali);font-weight:700;}
+  .monto-box .cifra{font-family:'Playfair Display';font-size:34px;font-weight:700;color:var(--azul-terra);}
+  .monto-letra{font-size:13px;color:#444;font-style:italic;margin-top:2px;width:100%;}
+
+  .bloque{margin-bottom:18px;}
+  .bloque label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--verde-cali);font-weight:700;margin-bottom:4px;}
+  .bloque .val{font-size:15px;color:var(--texto);}
+
+  .edit{outline:none;border-bottom:1px dashed #c3cfe0;padding:1px 3px;min-width:40px;display:inline-block;}
+  .edit:focus{border-bottom:1px solid var(--azul-terra);background:#f0f5ff;}
+
+  .firmas{display:flex;justify-content:space-between;gap:30px;margin-top:44px;}
+  .firma{flex:1;text-align:center;}
+  .firma .linea{border-top:1.5px solid var(--azul-oscuro);margin-bottom:6px;}
+  .firma .rol{font-size:12px;font-weight:600;color:var(--azul-oscuro);}
+  .firma .sub{font-size:11px;color:#666;}
+
+  .rec-footer{
+    background:var(--gris-claro);border-top:2px solid var(--azul-terra);
+    padding:16px 34px;text-align:center;font-size:12px;color:#555;
+  }
+  .rec-footer strong{color:var(--azul-oscuro);}
+
+  @media print{
+    body{background:#fff;padding:0;}
+    .controles{display:none;}
+    .recibo{box-shadow:none;border-radius:0;max-width:100%;}
+    @page{margin:14mm;}
+  }
+</style>
+</head>
+<body>
+
+  <div class="controles">
+    <p>Recibo listo para enviar</p>
+    <small>Edita los campos con línea punteada (nombre del cliente, folio, fecha, forma de pago). Luego usa "Imprimir / Guardar PDF" y elige "Guardar como PDF". Ese PDF lo mandas por WhatsApp.</small>
+    <button class="btn btn-print" onclick="window.print()">🖨️ Imprimir / Guardar PDF</button>
+    <button class="btn btn-clear" onclick="prepararNuevo()">➕ Nuevo recibo en blanco</button>
+  </div>
+
+  <div class="recibo">
+    <div class="rec-header">
+      <div class="marca">
+        <div class="logo-icon">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path d="M50 14 L88 44 L12 44 Z" fill="#0852AF"/>
+            <path d="M18 44 L82 44 L82 74 Q50 92 18 74 Z" fill="#117372"/>
+          </svg>
+        </div>
+        <div class="marca-txt">
+          <h1>TERRA CALI</h1>
+          <span>Donde tu historia comienza</span>
+        </div>
+      </div>
+      <div class="rec-tipo">
+        <h2>RECIBO</h2>
+        <div class="folio">Folio: <span class="edit" contenteditable="true">TC-2026-001</span></div>
+      </div>
+    </div>
+
+    <div class="rec-body">
+      <div class="fila-top">
+        <div class="campo">
+          <label>Lugar y fecha</label>
+          <div class="val">Mexicali, B.C., a <span class="edit" contenteditable="true">16 de septiembre de 2026</span></div>
+        </div>
+        <div class="campo">
+          <label>Forma de pago</label>
+          <div class="val"><span class="edit" contenteditable="true">Transferencia electrónica</span></div>
+        </div>
+      </div>
+
+      <div class="bloque">
+        <label>Recibí de</label>
+        <div class="val"><span class="edit" contenteditable="true" style="min-width:260px">[Nombre completo del cliente]</span></div>
+      </div>
+
+      <div class="monto-box">
+        <div>
+          <div class="lbl">Cantidad recibida</div>
+          <div class="cifra">$<span class="edit" contenteditable="true">5,000.00</span> <span style="font-size:16px;color:var(--verde-cali)">MXN</span></div>
+        </div>
+        <div class="monto-letra">(<span class="edit" contenteditable="true">Cinco mil pesos 00/100 M.N.</span>)</div>
+      </div>
+
+      <div class="bloque">
+        <label>Por concepto de</label>
+        <div class="val" contenteditable="true">Pago de <strong>anticipo de avalúo</strong> para la compra del <strong>Lote 01, Manzana 07</strong> del Fraccionamiento <strong>Ampliación Islas Agrarias</strong>, Mexicali, B.C.</div>
+      </div>
+
+      <div class="bloque" style="background:var(--gris-claro);border-radius:8px;padding:12px 16px;font-size:13px;color:#555;">
+        <strong style="color:var(--azul-oscuro)">Nota:</strong>
+        <span contenteditable="true">Este pago corresponde al anticipo del avalúo. El saldo restante del avalúo y el pago del lote se cubrirán conforme al esquema acordado (contado / crédito Infonavit).</span>
+      </div>
+
+      <div class="firmas">
+        <div class="firma">
+          <div class="linea"></div>
+          <div class="rol">Recibió por Terra Cali</div>
+          <div class="sub"><span class="edit" contenteditable="true">Nombre y firma</span></div>
+        </div>
+        <div class="firma">
+          <div class="linea"></div>
+          <div class="rol">Entregó / Cliente</div>
+          <div class="sub"><span class="edit" contenteditable="true">Nombre y firma</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rec-footer">
+      <strong>Terra Cali</strong> · Mexicali, Baja California · WhatsApp 664-612-0031 · info@terracali.com.mx
+    </div>
+  </div>
+
+<script>
+  function prepararNuevo(){
+    if(!confirm('¿Vaciar los campos para hacer un recibo nuevo? Se limpian nombre, montos y concepto.')) return;
+    document.querySelector('.folio .edit').textContent = 'TC-2026-';
+    document.querySelectorAll('.bloque .val')[0].querySelector('.edit').textContent = '[Nombre completo del cliente]';
+    document.querySelector('.cifra .edit').textContent = '0.00';
+    document.querySelector('.monto-letra .edit').textContent = 'Cero pesos 00/100 M.N.';
+    document.querySelectorAll('.bloque .val')[1].innerHTML = '[Escribe aquí el concepto del pago]';
+    window.scrollTo(0,0);
+  }
+</script>
+</body>
+</html>
