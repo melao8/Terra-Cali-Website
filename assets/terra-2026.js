@@ -80,3 +80,18 @@
     } finally { clearTimeout(timer); btn.disabled=false; if(status.dataset.state !== 'success') btn.textContent=label; }
   });
 })();
+
+// Reveal cards once, with content visible even if motion is unavailable.
+(() => {
+  const preference=window.matchMedia('(prefers-reduced-motion: reduce)');
+  if(preference.matches || !('IntersectionObserver' in window) || !Element.prototype.animate) return;
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(!entry.isIntersecting) return;
+      observer.unobserve(entry.target);
+      if(!preference.matches) entry.target.animate([{opacity:.5,transform:'translateY(16px)'},{opacity:1,transform:'translateY(0)'}],{duration:420,easing:'ease-out'});
+    });
+  },{threshold:.12});
+  document.querySelectorAll('.tc-property,.tc-steps article,.tc-seller-banner').forEach(el=>observer.observe(el));
+  preference.addEventListener('change',()=>{if(preference.matches){observer.disconnect();document.getAnimations().forEach(a=>a.finish());}});
+})();

@@ -6,8 +6,7 @@
 /* Portada centrada en terrenos; Quintas del Rey está en notaría. */
 .tc-opportunities{background:#0A2652;color:white;border-radius:12px;padding:34px 36px;min-height:518px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}.tc-opportunities-top{display:flex;justify-content:space-between;font-size:9px;letter-spacing:.16em;color:#a4c9d1}.tc-opportunities-top>span:last-child{color:#FFC72C;font-size:23px;line-height:1}.tc-opportunities h2{font-size:clamp(40px,4vw,58px);line-height:1.06;margin:26px 0;font-weight:500;color:white}.tc-opportunities h2 em{font-style:normal;color:#5fd8c3}.tc-opportunities>a{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #ffffff2b;padding:18px 0;color:white}.tc-opportunities small{display:block;font-size:8px;letter-spacing:.1em;color:#afcbd5}.tc-opportunities strong{display:block;font-family:Outfit,sans-serif;font-size:25px;font-weight:500}.tc-opportunities>a>b{color:#FFC72C;font-size:24px;font-weight:400}.tc-opportunities-bottom{font-size:9px;color:#afcbd5;padding-top:10px}.tc-house-search{background:#e8d8b9;color:#0A2652}.tc-sale-status{background:#fff5d7;border:1px solid #e0bc57;border-radius:10px;padding:20px;margin:24px 0;color:#60480d}.tc-sale-status p{margin:8px 0 0;font-size:13px}@media(max-width:760px){.tc-opportunities{min-height:440px;padding:27px}.tc-opportunities h2{font-size:47px}.tc-opportunities strong{font-size:25px}}
 
-/* Respeta la guía del repositorio: sin animaciones en la web principal. */
-html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}.tc-button:hover,.prop-card:hover,.dev-card:hover{transform:none}.prop-card:hover .prop-card-img img{transform:none}
+/* Movimiento suave solicitado; respeta la preferencia de movimiento reducido. */
 
 /* Fotografías reales proporcionadas por Terra Cali. */
 .tc-san-patricio-photo{object-position:center bottom}.tc-development-photo{margin:0 0 44px}.tc-development-image{display:block;width:100%;height:auto;border-radius:12px}.tc-development-photo figcaption{font-size:12px;color:#526573;margin-top:10px}
@@ -30,3 +29,21 @@ html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation
 .tc-infonavit-hero{margin:22px auto 26px;align-items:center;padding:18px 32px}
 .tc-infonavit-hero>strong{font-size:clamp(32px,5vw,48px)}
 @media(max-width:480px){.tc-infonavit{padding:12px 17px}.tc-infonavit-hero{padding:16px 24px}}
+
+/* Photo and price emphasis, preserving the approved layout. */
+.tc-showcase-panel>img{height:330px}
+.tc-property-photo,.tc-house-search{height:275px}
+.tc-property-photo{object-position:center 65%}
+.tc-san-patricio-photo{object-position:center bottom}
+.tc-price{border-left:4px solid #147d79;padding:4px 0 4px 15px;margin:0 0 20px}
+.tc-price strong{display:block;font:700 clamp(30px,3vw,38px)/1.15 'Outfit',sans-serif;color:#0a2652;letter-spacing:-.025em}
+.tc-price span{display:block;font-size:14px;color:#526573;margin-top:7px;line-height:1.5}
+.tc-property-body p{font-size:15px;line-height:1.7}
+.tc-pill{font-size:13px}
+.tc-showcase-caption #tc-showcase-fact{font:600 clamp(20px,2.3vw,26px)/1.4 'Outfit',sans-serif;color:#fff}
+.tc-property{box-shadow:0 6px 20px #0a265209;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.tc-showcase-tabs button,.tc-filters button,.tc-showcase-caption a{transition:background .2s ease,transform .2s ease,box-shadow .2s ease}
+.tc-button:active,.tc-showcase-caption a:active{transform:translateY(1px)}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){.tc-property:hover{transform:translateY(-5px);box-shadow:0 15px 32px #0a265218;border-color:#9ccac4}.tc-showcase-caption a:hover{transform:translateY(-2px);background:#e3f3ef}}
+@media(max-width:760px){.tc-showcase-panel>img{height:290px}.tc-property-photo,.tc-house-search{height:285px}.tc-property-body{padding:24px}.tc-price strong{font-size:36px}}
+@media(prefers-reduced-motion:reduce){.tc-property:hover,.tc-button:hover,.tc-button:active,.tc-showcase-caption a:active{transform:none}}
