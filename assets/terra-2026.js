@@ -10,6 +10,28 @@
   }
   const page = location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.tc-links a').forEach(a => { if(a.getAttribute('href') === page) a.setAttribute('aria-current','page'); });
+
+  const developments = {
+    islas: {image:'assets/img/islas-agrarias-real.jpg', name:'Ampliación Islas Agrarias', payment:'CONTADO O INFONAVIT', fact:'200 m² · $450,000 MXN', href:'islas-agrarias.html', width:1599, height:899},
+    san: {image:'assets/img/san-patricio-real.jpg', name:'San Patricio', payment:'CONTADO O FINANCIAMIENTO DIRECTO', fact:'160 m² · $400,000 MXN · Sin servicios', href:'residencial.html#san-patricio', width:1536, height:1152}
+  };
+  document.querySelectorAll('[data-development]').forEach(button => button.addEventListener('click', () => {
+    const key=button.dataset.development, item=developments[key];
+    document.querySelectorAll('[data-development]').forEach(b => b.setAttribute('aria-pressed',String(b===button)));
+    const image=document.getElementById('tc-showcase-image');
+    image.src=item.image; image.alt='Vista del terreno en '+item.name; image.width=item.width; image.height=item.height;
+    image.style.objectPosition=key==='san'?'center bottom':'center';
+    document.getElementById('tc-showcase-name').textContent=item.name;
+    document.getElementById('tc-showcase-payment').textContent=item.payment;
+    document.getElementById('tc-showcase-fact').textContent=item.fact;
+    document.getElementById('tc-showcase-link').href=item.href;
+  }));
+  document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => {
+    const filter=button.dataset.filter;
+    document.querySelectorAll('[data-filter]').forEach(b => b.setAttribute('aria-pressed',String(b===button)));
+    document.querySelectorAll('[data-property-type]').forEach(card => {card.hidden=filter!=='all' && card.dataset.propertyType!==filter;});
+    document.getElementById('tc-filter-status').textContent=filter==='all'?'Explore 3 opciones para dar el siguiente paso.':filter==='terreno'?'2 desarrollos para conocer.':'Cuéntenos qué casa está buscando.';
+  }));
   const form = document.getElementById('contactForm');
   if (!form) return;
   const interest = form.elements.interes;
