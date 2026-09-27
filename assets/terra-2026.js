@@ -23,6 +23,8 @@
     image.style.objectPosition=key==='san'?'center bottom':'center';
     document.getElementById('tc-showcase-name').textContent=item.name;
     document.getElementById('tc-showcase-payment').textContent=item.payment;
+    const creditBadge=document.getElementById('tc-showcase-infonavit');
+    if(creditBadge) creditBadge.hidden=key!=='islas';
     document.getElementById('tc-showcase-fact').textContent=item.fact;
     document.getElementById('tc-showcase-link').href=item.href;
   }));
