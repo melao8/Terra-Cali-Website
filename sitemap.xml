@@ -31,11 +31,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.terracali.com.mx/casas.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.terracali.com.mx/blog.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
