@@ -14,7 +14,7 @@
   const developments = {
     islas: {image:'assets/img/islas-agrarias-real.jpg', name:'Ampliación Islas Agrarias', payment:'CONTADO O INFONAVIT', fact:'200 m² · $450,000 MXN', href:'islas-agrarias.html', width:1599, height:899},
     san: {image:'assets/img/san-patricio-real.jpg', name:'San Patricio', payment:'CONTADO O FINANCIAMIENTO DIRECTO', fact:'160 m² · $400,000 MXN · Sin servicios', href:'residencial.html#san-patricio', width:1536, height:1152},
-    sb: {image:'assets/img/sb-terreno-real.jpg', name:'San Bernardino', payment:'PREVENTA · FINANCIAMIENTO DIRECTO', fact:'160 m² · $20,000 de enganche', href:'san-bernardino.html', width:1600, height:892}
+    sb: {image:'assets/img/sb-terreno-real.jpg', name:'San Bernardino', payment:'PREVENTA · FINANCIAMIENTO DIRECTO', fact:'$448,000 · $20,000 de enganche · $3,950 al mes', href:'san-bernardino.html', width:1600, height:892}
   };
   document.querySelectorAll('[data-development]').forEach(button => button.addEventListener('click', () => {
     const key=button.dataset.development, item=developments[key];
